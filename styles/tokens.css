@@ -1,0 +1,17 @@
+/* ATX Home Rescue — Design Tokens */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@500;600;700&family=Archivo:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&family=Caveat:wght@700&display=swap');
+
+:root {
+  --navy:      #1e3a57;
+  --navy-deep: #14293f;
+  --navy-ink:  #0d1e2f;
+  --orange:    #ef6a2a;
+  --orange-hot:#e85a1a;
+  --cream:     #f4ede0;
+  --cream-2:   #ece3d1;
+  --ink:       #141821;
+  --ink-soft:  #4a4f5c;
+  --rule:      #d9cfb8;
+  --green:     #2bb673;
+  --star:      #ffd66b;
+}

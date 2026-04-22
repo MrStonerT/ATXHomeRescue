@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Page not found — ATX Home Rescue</title>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<link rel="icon" href="assets/logo.png"/>
+<link rel="stylesheet" href="styles/tokens.css"/>
+<link rel="stylesheet" href="styles/base.css"/>
+<link rel="stylesheet" href="styles/layout.css"/>
+<style>
+  .not-found {
+    min-height: calc(100vh - 74px);
+    display: flex; align-items: center; justify-content: center;
+    padding: 60px 28px; text-align: center;
+  }
+  .not-found .card {
+    background: #fff; border: 1px solid var(--rule);
+    padding: 48px 40px; max-width: 480px; width: 100%;
+  }
+  .not-found .code {
+    font-family: 'Anton'; font-size: 120px; line-height: 1;
+    color: var(--orange); letter-spacing: .02em; margin: 0 0 4px;
+  }
+  .not-found h1 {
+    font-family: 'Anton'; font-size: 36px; text-transform: uppercase;
+    letter-spacing: .01em; margin: 0 0 14px; line-height: 1;
+  }
+  .not-found p {
+    color: var(--ink-soft); font-size: 16px; line-height: 1.5; margin: 0 0 28px;
+  }
+  .not-found .actions { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="container nav">
+    <a href="index.html" class="brand">
+      <img src="assets/logo.png" alt="ATX Home Rescue"/>
+      <div>
+        <div class="wordmark">ATX Home Rescue</div>
+        <div class="tag">Repair · Remodel · Reclaim</div>
+      </div>
+    </a>
+  </div>
+</header>
+
+<div class="not-found">
+  <div class="card">
+    <div class="code">404</div>
+    <h1>Lost the map?</h1>
+    <p>This page wandered off. Happens to the best of us. Head back to the homepage and Ranger will get you sorted.</p>
+    <div class="actions">
+      <a href="index.html" class="btn lg">← Back to homepage</a>
+      <a href="booking.html" class="btn lg ghost">Talk to Ranger</a>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

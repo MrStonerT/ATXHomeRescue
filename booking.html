@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Book your rescue — ATX Home Rescue</title>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta name="description" content="Book a flat-priced handyman rescue in Northwest Austin. Describe your project, get a price, and pick a same-week slot."/>
+<meta name="robots" content="noindex"/>
+<link rel="canonical" href="https://atxhomerescue.com/booking.html"/>
+<link rel="icon" href="assets/logo.png"/>
+<link rel="apple-touch-icon" href="assets/logo.png"/>
+<link rel="stylesheet" href="styles/tokens.css"/>
+<link rel="stylesheet" href="styles/base.css"/>
+<link rel="stylesheet" href="styles/layout.css"/>
+<link rel="stylesheet" href="styles/booking.css"/>
+</head>
+<body>
+
+<header class="site">
+  <div class="nav" style="max-width:1240px;margin:0 auto;padding:0 28px">
+    <a href="index.html" class="brand">
+      <img src="assets/logo.png" alt="ATX Home Rescue"/>
+      <div>
+        <div class="wordmark">ATX Home Rescue</div>
+        <div class="tag">Repair · Remodel · Reclaim</div>
+      </div>
+    </a>
+    <a href="index.html" class="back" id="backLink">← Back to site</a>
+    <button class="lang-toggle" id="langToggle" aria-label="Language" style="margin-left:auto"><span class="lang-flag">EN</span> / <span class="lang-flag off">ES</span></button>
+  </div>
+</header>
+
+<section class="progress">
+  <div class="steps" id="steps"></div>
+</section>
+
+<main class="shell">
+  <!-- CHAT SIDE -->
+  <section class="panel chat-wrap">
+    <div class="chat-head">
+      <div class="avatar">R</div>
+      <div class="name"><span id="rangerName">Rescue Ranger</span><small id="rangerSub">AI CONCIERGE · ATX HOME RESCUE</small></div>
+      <div class="dot-live"></div>
+    </div>
+    <div class="chat-body" id="chatBody"></div>
+    <div class="chat-input">
+      <button class="iconbtn" id="attachBtn" title="Attach photo">📎</button>
+      <input id="chatInput" placeholder="Type a message…"/>
+      <button class="send" id="chatSend">↑</button>
+    </div>
+    <div class="chat-foot" id="chatFoot"><span style="color:var(--orange)">●</span> Ranger · powered by ATX Home Rescue · avg reply 3s</div>
+  </section>
+
+  <!-- SUMMARY SIDE -->
+  <aside class="summary">
+    <div class="panel">
+      <div class="sum-eyebrow" id="sumEyebrow">Your rescue · flat quote</div>
+      <h2 class="sum-title" id="sumTitle">—</h2>
+      <div class="sum-price" id="sumPrice">—</div>
+      <div class="sum-meta" id="sumMeta">Ranger will match this</div>
+
+      <div class="sum-section" id="sumInclSec" style="display:none">
+        <h4 id="inclLbl">What's included</h4>
+        <ul class="sum-list" id="sumIncl"></ul>
+      </div>
+
+      <div class="sum-section" id="sumPhotoSec" style="display:none">
+        <h4 id="photoLbl">Photos shared</h4>
+        <div class="uploads" id="sumPhotos"></div>
+      </div>
+
+      <div class="sum-section" id="sumSlotSec" style="display:none">
+        <h4 id="slotLbl">Scheduled</h4>
+        <div class="sum-slot" id="sumSlot"><span class="ic">📅</span><span id="sumSlotText">—</span></div>
+      </div>
+
+      <div class="sum-section" id="sumTotalsSec" style="display:none">
+        <h4 id="totalsLbl">Payment</h4>
+        <div class="sum-totals" id="sumTotals"></div>
+      </div>
+
+      <div class="sum-section" style="color:var(--ink-soft);font-size:12px;line-height:1.5">
+        <div id="sumNote">Flat price. Materials included. Reschedule anytime. Powered by Jobber.</div>
+      </div>
+    </div>
+  </aside>
+</main>
+
+<script src="scripts/i18n.js"></script>
+<script src="scripts/booking.js"></script>
+</body>
+</html>
