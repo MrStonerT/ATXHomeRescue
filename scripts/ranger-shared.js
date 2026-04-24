@@ -66,7 +66,7 @@
     if (_tsWidgetId === null) return null;
     return new Promise(function (resolve) {
       _tsResolvers.push(resolve);
-      try { turnstile.execute(_tsWidgetId); }
+      try { turnstile.reset(_tsWidgetId); turnstile.execute(_tsWidgetId); }
       catch (e) { _tsResolvers = _tsResolvers.filter(function (r) { return r !== resolve; }); resolve(null); }
       setTimeout(function () {
         if (_tsResolvers.indexOf(resolve) !== -1) {
