@@ -4,10 +4,13 @@
 <meta charset="utf-8"/>
 <title>Page not found — ATX Home Rescue</title>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; script-src 'self'; frame-src 'none'; connect-src 'self' https://ranger-api.atxhomerescue.workers.dev http://localhost:8787; object-src 'none'; base-uri 'self'; form-action 'self';"/>
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin"/>
 <link rel="icon" href="assets/logo.png"/>
 <link rel="stylesheet" href="styles/tokens.css"/>
 <link rel="stylesheet" href="styles/base.css"/>
 <link rel="stylesheet" href="styles/layout.css"/>
+<link rel="stylesheet" href="styles/ranger.css"/>
 <style>
   .not-found {
     min-height: calc(100vh - 74px);
@@ -58,5 +61,9 @@
   </div>
 </div>
 
+<script src="scripts/i18n.js"></script>
+<script src="scripts/ranger-shared.js"></script>
+<script src="scripts/ranger-agent.js"></script>
+<script src="scripts/ranger-widget.js" defer></script>
 </body>
 </html>

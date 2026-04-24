@@ -4,6 +4,8 @@
 <meta charset="utf-8"/>
 <title>ATX Home Rescue — NW Austin handyman, flat-priced.</title>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; script-src 'self'; frame-src 'none'; connect-src 'self' https://ranger-api.atxhomerescue.workers.dev http://localhost:8787; object-src 'none'; base-uri 'self'; form-action 'self';"/>
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin"/>
 <meta name="description" content="Flat-priced handyman and home-care for Northwest Austin. Tell our agent what needs doing, get a price in 60 seconds, book a crew this week."/>
 <link rel="canonical" href="https://atxhomerescue.com/"/>
 <link rel="icon" href="assets/logo.png"/>
@@ -24,6 +26,7 @@
 <link rel="stylesheet" href="styles/base.css"/>
 <link rel="stylesheet" href="styles/layout.css"/>
 <link rel="stylesheet" href="styles/homepage.css"/>
+<link rel="stylesheet" href="styles/ranger.css"/>
 </head>
 <body>
 
@@ -42,6 +45,7 @@
     </a>
     <nav class="nav-links">
       <a href="#packages">Packages</a>
+      <a href="packages.html">All packages</a>
       <a href="#how">How it works</a>
       <a href="#gallery">Work</a>
       <a href="#reviews">Reviews</a>
@@ -90,7 +94,7 @@
             <button class="sug" data-msg="I have a pile of small stuff around the house">📋 To-do pileup</button>
             <button class="sug" data-msg="I need to mount a TV and some shelves">📺 Mount stuff</button>
             <button class="sug" data-msg="My deck needs some repairs">🪵 Deck or fence</button>
-            <button class="sug" data-msg="I want to install smart cameras and a thermostat">🏠 Smart home</button>
+            <button class="sug" data-msg="My filters and detectors haven't been checked in forever">🌱 Spring tune-up</button>
           </div>
         </div>
         <div class="chat-input">
@@ -139,7 +143,7 @@
       <h3>Serving <span class="hi">Northwest Austin.</span></h3>
       <p>Check your ZIP — if we cover it, Ranger can probably have a crew at your door this week.</p>
     </div>
-    <form class="zip-form" onsubmit="checkZip(event)">
+    <form class="zip-form">
       <input class="zip-input" placeholder="78___" maxlength="5" id="zipIn" inputmode="numeric"/>
       <button class="btn lg" type="submit">Check coverage →</button>
       <div class="zips" id="zipResult">
@@ -165,7 +169,7 @@
       <button class="cat on">All</button>
       <button class="cat">⭐ Popular</button>
       <button class="cat">🔨 Handyman</button>
-      <button class="cat">📺 Smart home</button>
+      <button class="cat">🛡️ Maintenance</button>
       <button class="cat">🪵 Outdoor</button>
       <button class="cat">🏠 Room rescues</button>
     </div>
@@ -223,15 +227,15 @@
 
       <article class="pkg">
         <div class="pkg-img">
-          <div class="stock">[ stock photo · smart doorbell ]</div>
+          <div class="stock">[ stock photo · spring home refresh ]</div>
         </div>
         <div class="pkg-body">
-          <div class="pkg-emoji">🏠</div>
-          <h3>Smart Home Starter</h3>
-          <p class="desc">Video doorbell + 2 outdoor cameras + smart thermostat, set up on your Wi-Fi.</p>
+          <div class="pkg-emoji">🌱</div>
+          <h3>Spring Home Refresh</h3>
+          <p class="desc">Air filter swap, AC condenser exterior cleaning, and detector battery check — your home, ready for the season.</p>
           <div class="meta">
-            <span class="price">$329</span>
-            <span class="dur">2 HRS · BYO DEVICES</span>
+            <span class="price">$179</span>
+            <span class="dur">2 HRS · FILTERS INCL.</span>
           </div>
           <a href="booking.html" class="btn wide">Book this →</a>
         </div>
@@ -246,7 +250,7 @@
           <h3>Gallery Wall</h3>
           <p class="desc">Up to 8 pieces hung perfectly level, with anchors rated for the weight.</p>
           <div class="meta">
-            <span class="price">$179</span>
+            <span class="price">$199</span>
             <span class="dur">1.5 HRS</span>
           </div>
           <a href="booking.html" class="btn wide">Book this →</a>
@@ -270,6 +274,10 @@
       </article>
     </div>
 
+    <div style="text-align:center;margin-top:30px">
+      <a href="packages.html" class="btn lg ghost">Browse all 40+ packages →</a>
+    </div>
+
     <!-- HOURLY BLOCKS -->
     <div class="sec-head" style="margin-top:60px;margin-bottom:20px">
       <div>
@@ -282,7 +290,7 @@
     <div class="hourly">
       <div class="block">
         <h4>Quick Fix</h4>
-        <div class="price">$149</div>
+        <div class="price">$179</div>
         <div class="hrs">2 HRS · 1 CREW</div>
         <p class="note">About 3 small tasks.</p>
         <a href="booking.html" class="btn wide navy">Reserve →</a>
@@ -290,23 +298,16 @@
       <div class="block pop">
         <span class="pop-tag">Most booked</span>
         <h4>Half-Day</h4>
-        <div class="price">$249</div>
+        <div class="price">$279</div>
         <div class="hrs">4 HRS · 1 CREW</div>
         <p class="note">Best value — most lists fit here.</p>
         <a href="booking.html" class="btn wide">Reserve →</a>
       </div>
       <div class="block">
         <h4>Full-Day</h4>
-        <div class="price">$449</div>
+        <div class="price">$499</div>
         <div class="hrs">8 HRS · 1 CREW</div>
         <p class="note">The whole spring-cleaning list.</p>
-        <a href="booking.html" class="btn wide navy">Reserve →</a>
-      </div>
-      <div class="block">
-        <h4>2-Person Blitz</h4>
-        <div class="price">$429</div>
-        <div class="hrs">4 HRS · 2 CREW</div>
-        <p class="note">Twice the hands, half the time.</p>
         <a href="booking.html" class="btn wide navy">Reserve →</a>
       </div>
     </div>
@@ -434,7 +435,7 @@
       </details>
       <details>
         <summary>Do you do big remodels?</summary>
-        <p>Not yet. We're focused on small-to-medium projects: handyman work, smart-home installs, trim &amp; carpentry, deck &amp; fence repair, appliance installs. If it's a bathroom gut-job, we'll tell you honestly.</p>
+        <p>Not yet. We're focused on small-to-medium projects: handyman work, seasonal maintenance, trim &amp; carpentry, deck &amp; fence repair, appliance installs. If it's a bathroom gut-job, we'll tell you honestly.</p>
       </details>
       <details>
         <summary>How do I pay?</summary>
@@ -474,9 +475,10 @@
         <a href="#packages">TV Mount Pro</a>
         <a href="#packages">Move-in Rescue</a>
         <a href="#packages">Deck Revive</a>
-        <a href="#packages">Smart Home Starter</a>
+        <a href="#packages">Spring Home Refresh</a>
         <a href="#packages">Gallery Wall</a>
         <a href="#packages">Fence Patch-Up</a>
+        <a href="packages.html"><b>Browse all 40+ →</b></a>
       </div>
       <div>
         <h5>Company</h5>
@@ -508,13 +510,10 @@
   </div>
 </footer>
 
-<!-- Floating Ranger button -->
-<button class="float-agent" onclick="document.getElementById('chat').scrollIntoView({behavior:'smooth',block:'center'})" aria-label="Chat with Ranger">
-  <span class="av">R</span>
-  Chat with Ranger
-</button>
-
 <script src="scripts/i18n.js"></script>
 <script src="scripts/homepage.js"></script>
+<script src="scripts/ranger-shared.js"></script>
+<script src="scripts/ranger-agent.js"></script>
+<script src="scripts/ranger-widget.js" defer></script>
 </body>
 </html>

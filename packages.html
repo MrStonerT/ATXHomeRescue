@@ -1,0 +1,669 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>All Packages — ATX Home Rescue</title>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; script-src 'self'; frame-src 'none'; connect-src 'self' https://ranger-api.atxhomerescue.workers.dev http://localhost:8787; object-src 'none'; base-uri 'self'; form-action 'self';"/>
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin"/>
+<meta name="description" content="Every flat-priced rescue package from ATX Home Rescue — handyman, maintenance, paint, flooring, exterior, and bundles. Search and filter to find your match."/>
+<link rel="canonical" href="https://atxhomerescue.com/packages.html"/>
+<link rel="icon" href="assets/logo.png"/>
+<link rel="apple-touch-icon" href="assets/logo.png"/>
+
+<!-- Open Graph -->
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://atxhomerescue.com/packages.html"/>
+<meta property="og:title" content="All Packages — ATX Home Rescue"/>
+<meta property="og:description" content="Every flat-priced rescue package — handyman, maintenance, paint, flooring, exterior, and bundles."/>
+<meta property="og:image" content="https://atxhomerescue.com/assets/logo.png"/>
+
+<link rel="stylesheet" href="styles/tokens.css"/>
+<link rel="stylesheet" href="styles/base.css"/>
+<link rel="stylesheet" href="styles/layout.css"/>
+<link rel="stylesheet" href="styles/homepage.css"/>
+<link rel="stylesheet" href="styles/packages.css"/>
+<link rel="stylesheet" href="styles/ranger.css"/>
+</head>
+<body>
+
+<div class="announce">
+  ⚡ Booking this week in NW Austin · <b>Flat prices, no estimates.</b> Serving 78726, 78727, 78729, 78730, 78731, 78750, 78759.
+</div>
+
+<header class="site">
+  <div class="container nav">
+    <a href="index.html" class="brand">
+      <img src="assets/logo.png" alt="ATX Home Rescue"/>
+      <div>
+        <div class="wordmark">ATX Home Rescue</div>
+        <div class="tag">Repair · Remodel · Reclaim</div>
+      </div>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html#packages">Featured</a>
+      <a href="packages.html" class="on">All packages</a>
+      <a href="index.html#how">How it works</a>
+      <a href="index.html#gallery">Work</a>
+      <a href="index.html#reviews">Reviews</a>
+      <a href="index.html#faq">FAQ</a>
+    </nav>
+    <button class="lang-toggle" id="langToggle" aria-label="Language"><span class="lang-flag">EN</span> / <span class="lang-flag off">ES</span></button>
+    <a href="booking.html" class="btn">Start with Ranger →</a>
+  </div>
+</header>
+
+<!-- PAGE HERO -->
+<section class="cat-hero">
+  <div class="container">
+    <div class="eyebrow" style="color:var(--orange)"><span style="background:var(--orange)"></span>The full menu</div>
+    <h1 class="slab">Every rescue, <span class="hi">one place.</span></h1>
+    <p class="lede">40+ flat-priced packages, 3 hourly blocks, value bundles, and add-ons. Filter, search, or scroll. Every price includes labor; materials included unless noted.</p>
+  </div>
+</section>
+
+<!-- STICKY FILTER BAR -->
+<div class="cat-bar">
+  <div class="container cat-bar-inner">
+    <div class="cat-search">
+      <span class="search-ico">🔍</span>
+      <input id="catSearch" type="search" placeholder="Search packages — e.g. 'fan', 'caulk', 'paint'…" aria-label="Search packages"/>
+    </div>
+    <div class="cat-chips" id="catChips">
+      <button class="chip on" data-cat="all">All <span class="chip-count" id="count-all"></span></button>
+      <button class="chip" data-cat="bundles">🎁 Bundles</button>
+      <button class="chip" data-cat="install">🔧 Installation</button>
+      <button class="chip" data-cat="maint">🛡️ Maintenance</button>
+      <button class="chip" data-cat="paint">🎨 Paint &amp; Drywall</button>
+      <button class="chip" data-cat="floor">🪜 Flooring</button>
+      <button class="chip" data-cat="kitchen">🍳 Kitchen</button>
+      <button class="chip" data-cat="furn">🛋 Furniture</button>
+      <button class="chip" data-cat="ext">🪵 Exterior</button>
+      <button class="chip" data-cat="org">📦 Organization</button>
+      <button class="chip" data-cat="hourly">⏱️ Hourly blocks</button>
+      <button class="chip" data-cat="addon">➕ Add-ons</button>
+    </div>
+  </div>
+</div>
+
+<main class="container cat-main">
+
+  <p class="cat-empty" id="catEmpty" hidden>No packages match that search. Try a different term — or <a href="booking.html">ask Ranger to quote it.</a></p>
+
+  <!-- BUNDLES (featured at top) -->
+  <section class="cat-section" data-cat="bundles">
+    <div class="cat-h">
+      <h2>🎁 Bundles <span class="cat-tally"></span></h2>
+      <p>Stack a few rescues into one trip and save versus booking them individually.</p>
+    </div>
+    <div class="cat-grid">
+
+      <article class="cat-card pop" data-name="Homeowner Starter Bundle" data-cat="bundles">
+        <span class="cat-badge">BUNDLE · SAVE</span>
+        <div class="cat-emoji">🏡</div>
+        <h3>Homeowner Starter Bundle</h3>
+        <p class="desc">Spring Home Refresh + Kitchen Appliance Care + Home Safety Check, knocked out in one visit.</p>
+        <div class="meta"><span class="price">$299</span><span class="dur">3 HRS</span></div>
+        <a href="booking.html" class="btn wide">Book this →</a>
+      </article>
+
+      <article class="cat-card pop" data-name="Exterior Refresh Bundle" data-cat="bundles">
+        <span class="cat-badge">BUNDLE · SAVE</span>
+        <div class="cat-emoji">🌿</div>
+        <h3>Exterior Refresh Bundle</h3>
+        <p class="desc">Exterior Refresh + Power Wash Boost — gutters, walkways, and exterior surfaces in one trip.</p>
+        <div class="meta"><span class="price">$379</span><span class="dur">4 HRS</span></div>
+        <a href="booking.html" class="btn wide">Book this →</a>
+      </article>
+
+      <article class="cat-card pop" data-name="Curb Appeal Bundle" data-cat="bundles">
+        <span class="cat-badge">BUNDLE · SAVE</span>
+        <div class="cat-emoji">✨</div>
+        <h3>Curb Appeal Bundle</h3>
+        <p class="desc">Exterior Refresh + Headlight Restoration — your home and your driveway both pop.</p>
+        <div class="meta"><span class="price">$379</span><span class="dur">4 HRS</span></div>
+        <a href="booking.html" class="btn wide">Book this →</a>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- INSTALLATION & MOUNTING -->
+  <section class="cat-section" data-cat="install">
+    <div class="cat-h">
+      <h2>🔧 Installation &amp; Mounting <span class="cat-tally"></span></h2>
+      <p>Hanging, mounting, swapping fixtures, hardware refreshes, doors.</p>
+    </div>
+    <div class="cat-grid">
+
+      <article class="cat-card" data-name="TV Mount Pro" data-cat="install">
+        <span class="cat-badge">POPULAR</span>
+        <div class="cat-emoji">📺</div>
+        <h3>TV Mount Pro</h3>
+        <p class="desc">Professional mount for TVs up to 75". Clean cable management and full setup. (Excludes mounting to concrete/brick.)</p>
+        <div class="meta"><span class="price">$149</span><span class="dur">1 HR</span></div>
+        <a href="booking.html" class="btn wide">Book this →</a>
+      </article>
+
+      <article class="cat-card" data-name="Gallery Wall" data-cat="install">
+        <div class="cat-emoji">🎨</div>
+        <h3>Gallery Wall</h3>
+        <p class="desc">Up to 8 items. Level installation with proper anchors for heavy or mixed items.</p>
+        <div class="meta"><span class="price">$199</span><span class="dur">1.5 HRS</span></div>
+        <a href="booking.html" class="btn wide">Book this →</a>
+      </article>
+
+      <article class="cat-card" data-name="Move-In Rescue" data-cat="install">
+        <span class="cat-badge">POPULAR</span>
+        <div class="cat-emoji">🛋</div>
+        <h3>Move-In Rescue</h3>
+        <p class="desc">Multi-tasker special: shelving, rod installation, art hanging, and minor touch-ups.</p>
+        <div class="meta"><span class="price">$389</span><span class="dur">3 HRS</span></div>
+        <a href="booking.html" class="btn wide">Book this →</a>
+      </article>
+
+      <article class="cat-card" data-name="Fixture Swap" data-cat="install">
+        <div class="cat-emoji">💡</div>
+        <h3>Fixture Swap</h3>
+        <p class="desc">Replace existing light fixture or outlet using current wiring.</p>
+        <div class="meta"><span class="price">$129</span><span class="dur">1 HR</span></div>
+        <a href="booking.html" class="btn wide">Book this →</a>
+      </article>
+
+      <article class="cat-card" data-name="Ceiling Fan Replacement" data-cat="install">
+        <div class="cat-emoji">🌀</div>
+        <h3>Ceiling Fan Replacement</h3>
+        <p class="desc">Replace existing fan unit using same wiring and ceiling mount.</p>
+        <div class="meta"><span class="price">$149</span><span class="dur">1.5 HRS</span></div>
+        <a href="booking.html" class="btn wide">Book this →</a>
+      </article>
+
+      <article class="cat-card" data-name="Blind &amp; Curtain Install" data-cat="install">
+        <div class="cat-emoji">🪟</div>
+        <h3>Blind &amp; Curtain Install</h3>
+        <p class="desc">Install blinds, shades, or curtain rods (hardware/brackets included).</p>
+        <div class="meta"><span class="price">$129</span><span class="dur">1 HR</span></div>
+        <a href="booking.html" class="btn wide">Book this →</a>
+      </article>
+
+      <article class="cat-card" data-name="Door Hardware Refresh" data-cat="install">
+        <div class="cat-emoji">🚪</div>
+        <h3>Door Hardware Refresh</h3>
+        <p class="desc">Replace handles, deadbolts, and hinges.</p>
+        <div class="meta"><span class="price">$119</span><span class="dur">1 HR</span></div>
+        <a href="booking.html" class="btn wide">Book this →</a>
+      </article>
+
+      <article class="cat-card" data-name="Door Adjustment Package" data-cat="install">
+        <div class="cat-emoji">🚪</div>
+        <h3>Door Adjustment Package</h3>
+        <p class="desc">Fix sticking doors, track alignment, and hinge tightening.</p>
+        <div class="meta"><span class="price">$119</span><span class="dur">1 HR</span></div>
+        <a href="booking.html" class="btn wide">Book this →</a>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- MAINTENANCE & SAFETY -->
+  <section class="cat-section" data-cat="maint">
+    <div class="cat-h">
+      <h2>🛡️ Maintenance &amp; Safety <span class="cat-tally"></span></h2>
+      <p>Seasonal upkeep, safety checks, and the small stuff that keeps things running.</p>
+    </div>
+    <div class="cat-grid">
+
+      <article class="cat-card" data-name="Spring Home Refresh" data-cat="maint">
+        <span class="cat-badge">FEATURED</span>
+        <div class="cat-emoji">🌱</div>
+        <h3>Spring Home Refresh</h3>
+        <p class="desc">Air filter swap, AC condenser exterior cleaning, and detector battery check.</p>
+        <div class="meta"><span class="price">$179</span><span class="dur">2 HRS</span></div>
+        <a href="booking.html" class="btn wide">Book this →</a>
+      </article>
+
+      <article class="cat-card" data-name="Home Safety Check" data-cat="maint">
+        <div class="cat-emoji">🚨</div>
+        <h3>Home Safety Check</h3>
+        <p class="desc">Test all smoke/CO detectors, replace batteries, and identify common home hazards.</p>
+        <div class="meta"><span class="price">$99</span><span class="dur">1 HR</span></div>
+        <a href="booking.html" class="btn wide">Book this →</a>
+      </article>
+
+      <article class="cat-card" data-name="Caulking Refresh" data-cat="maint">
+        <div class="cat-emoji">🛁</div>
+        <h3>Caulking Refresh</h3>
+        <p class="desc">Re-caulk kitchen and bathroom wet areas for a clean, water-tight finish.</p>
+        <div class="meta"><span class="price">$129</span><span class="dur">1.5 HRS</span></div>
+        <a href="booking.html" class="btn wide">Book this →</a>
+      </article>
+
+      <article class="cat-card" data-name="Weatherproofing Package" data-cat="maint">
+        <div class="cat-emoji">🌬️</div>
+        <h3>Weatherproofing Package</h3>
+        <p class="desc">Seal window/door drafts, install door sweeps, and add weather stripping.</p>
+        <div class="meta"><span class="price">$149</span><span class="dur">2 HRS</span></div>
+        <a href="booking.html" class="btn wide">Book this →</a>
+      </article>
+
+      <article class="cat-card" data-name="Dryer Vent Cleaning" data-cat="maint">
+        <div class="cat-emoji">🔥</div>
+        <h3>Dryer Vent Cleaning</h3>
+        <p class="desc">Clean accessible dryer vent and ductwork to prevent fire hazards.</p>
+        <div class="meta"><span class="price">$149</span><span class="dur">1.5 HRS</span></div>
+        <a href="booking.html" class="btn wide">Book this →</a>
+      </article>
+
+      <article class="cat-card" data-name="Garage Tune-Up" data-cat="maint">
+        <div class="cat-emoji">🚗</div>
+        <h3>Garage Tune-Up</h3>
+        <p class="desc">Lubricate tracks, check safety sensors, and verify alignment.</p>
+        <div class="meta"><span class="price">$129</span><span class="dur">1 HR</span></div>
+        <a href="booking.html" class="btn wide">Book this →</a>
+      </article>
+
+      <article class="cat-card" data-name="Ceiling Fan Clean" data-cat="maint">
+        <div class="cat-emoji">🌀</div>
+        <h3>Ceiling Fan Clean</h3>
+        <p class="desc">Deep clean and balance wobble on existing ceiling fans.</p>
+        <div class="meta"><span class="price">$109</span><span class="dur">1 HR</span></div>
+        <a href="booking.html" class="btn wide">Book this →</a>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- PAINT & DRYWALL -->
+  <section class="cat-section" data-cat="paint">
+    <div class="cat-h">
+      <h2>🎨 Paint &amp; Drywall <span class="cat-tally"></span></h2>
+      <p>Patches, touch-ups, and trim work that makes the room feel new.</p>
+    </div>
+    <div class="cat-grid">
+
+      <article class="cat-card" data-name="Drywall Patch &amp; Blend" data-cat="paint">
+        <div class="cat-emoji">🧱</div>
+        <h3>Drywall Patch &amp; Blend</h3>
+        <p class="desc">Patch small holes, blend texture, and touch-up paint.</p>
+        <div class="meta"><span class="price">$149</span><span class="dur">2 HRS</span></div>
+        <a href="booking.html" class="btn wide">Book this →</a>
+      </article>
+
+      <article class="cat-card" data-name="Paint Touch-Up" data-cat="paint">
+        <div class="cat-emoji">🖌️</div>
+        <h3>Paint Touch-Up</h3>
+        <p class="desc">Fix scuffs, marks, and small wall touch-ups.</p>
+        <div class="meta"><span class="price">$149</span><span class="dur">2 HRS</span></div>
+        <a href="booking.html" class="btn wide">Book this →</a>
+      </article>
+
+      <article class="cat-card" data-name="Trim Refresh" data-cat="paint">
+        <div class="cat-emoji">🪞</div>
+        <h3>Trim Refresh</h3>
+        <p class="desc">Paint baseboards or trim in a single room (materials included).</p>
+        <div class="meta"><span class="price">$179</span><span class="dur">2.5 HRS</span></div>
+        <a href="booking.html" class="btn wide">Book this →</a>
+      </article>
+
+      <article class="cat-card" data-name="Trim Repair" data-cat="paint">
+        <div class="cat-emoji">🪵</div>
+        <h3>Trim Repair</h3>
+        <p class="desc">Repair or replace small sections of damaged baseboard or casing.</p>
+        <div class="meta"><span class="price">$149</span><span class="dur">1.5 HRS</span></div>
+        <a href="booking.html" class="btn wide">Book this →</a>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- FLOORING & REPAIR -->
+  <section class="cat-section" data-cat="floor">
+    <div class="cat-h">
+      <h2>🪜 Flooring &amp; Repair <span class="cat-tally"></span></h2>
+      <p>Squeaks, loose planks, transitions, and small-area installs.</p>
+    </div>
+    <div class="cat-grid">
+
+      <article class="cat-card" data-name="Floor Repair &amp; Fix" data-cat="floor">
+        <div class="cat-emoji">🔨</div>
+        <h3>Floor Repair &amp; Fix</h3>
+        <p class="desc">Repair loose planks, squeaks, and transition strips.</p>
+        <div class="meta"><span class="price">$149</span><span class="dur">1.5 HRS</span></div>
+        <a href="booking.html" class="btn wide">Book this →</a>
+      </article>
+
+      <article class="cat-card" data-name="Carpet Patch &amp; Stretch" data-cat="floor">
+        <div class="cat-emoji">🧵</div>
+        <h3>Carpet Patch &amp; Stretch</h3>
+        <p class="desc">Re-stretch small loose areas or patch single damage spots.</p>
+        <div class="meta"><span class="price">$149</span><span class="dur">1.5 HRS</span></div>
+        <a href="booking.html" class="btn wide">Book this →</a>
+      </article>
+
+      <article class="cat-card" data-name="Transition Install" data-cat="floor">
+        <div class="cat-emoji">🚪</div>
+        <h3>Transition Install</h3>
+        <p class="desc">Install doorway transitions, thresholds, and T-moldings.</p>
+        <div class="meta"><span class="price">$129</span><span class="dur">1 HR</span></div>
+        <a href="booking.html" class="btn wide">Book this →</a>
+      </article>
+
+      <article class="cat-card" data-name="Small Area Flooring" data-cat="floor">
+        <div class="cat-emoji">🪵</div>
+        <h3>Small Area Flooring</h3>
+        <p class="desc">Install laminate or LVP up to 75 sq ft (materials provided by client).</p>
+        <div class="meta"><span class="price">$299</span><span class="dur">2.5 HRS</span></div>
+        <a href="booking.html" class="btn wide">Book this →</a>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- KITCHEN & APPLIANCES -->
+  <section class="cat-section" data-cat="kitchen">
+    <div class="cat-h">
+      <h2>🍳 Kitchen &amp; Appliances <span class="cat-tally"></span></h2>
+      <p>Appliance installs, swaps, and the deep cleans you keep meaning to do.</p>
+    </div>
+    <div class="cat-grid">
+
+      <article class="cat-card" data-name="Kitchen Appliance Care" data-cat="kitchen">
+        <div class="cat-emoji">🧊</div>
+        <h3>Kitchen Appliance Care</h3>
+        <p class="desc">Deep clean of fridge coils/dispenser and dishwasher filter maintenance.</p>
+        <div class="meta"><span class="price">$149</span><span class="dur">1.5 HRS</span></div>
+        <a href="booking.html" class="btn wide">Book this →</a>
+      </article>
+
+      <article class="cat-card" data-name="Appliance Install Basic" data-cat="kitchen">
+        <div class="cat-emoji">🍽️</div>
+        <h3>Appliance Install Basic</h3>
+        <p class="desc">Install dishwasher, microwave, or washer/dryer using existing hookups.</p>
+        <div class="meta"><span class="price">$199</span><span class="dur">2 HRS</span></div>
+        <a href="booking.html" class="btn wide">Book this →</a>
+      </article>
+
+      <article class="cat-card" data-name="Garbage Disposal Replacement" data-cat="kitchen">
+        <div class="cat-emoji">🚰</div>
+        <h3>Garbage Disposal Replacement</h3>
+        <p class="desc">Replace existing disposal unit with new model (hardware included).</p>
+        <div class="meta"><span class="price">$149</span><span class="dur">1.5 HRS</span></div>
+        <a href="booking.html" class="btn wide">Book this →</a>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- FURNITURE & ASSEMBLY -->
+  <section class="cat-section" data-cat="furn">
+    <div class="cat-h">
+      <h2>🛋 Furniture &amp; Assembly <span class="cat-tally"></span></h2>
+      <p>IKEA, Wayfair, big-box flat-pack — bring the boxes, we bring the patience.</p>
+    </div>
+    <div class="cat-grid">
+
+      <article class="cat-card" data-name="Furniture Assembly" data-cat="furn">
+        <div class="cat-emoji">🪑</div>
+        <h3>Furniture Assembly</h3>
+        <p class="desc">Standard assembly for up to 3 furniture items (IKEA, Wayfair, etc.).</p>
+        <div class="meta"><span class="price">$149</span><span class="dur">2 HRS</span></div>
+        <a href="booking.html" class="btn wide">Book this →</a>
+      </article>
+
+      <article class="cat-card" data-name="Wall Mount &amp; Install" data-cat="furn">
+        <div class="cat-emoji">🧱</div>
+        <h3>Wall Mount &amp; Install</h3>
+        <p class="desc">Install wall-mounted shelves, TVs, or organization systems.</p>
+        <div class="meta"><span class="price">$129</span><span class="dur">1 HR</span></div>
+        <a href="booking.html" class="btn wide">Book this →</a>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- EXTERIOR -->
+  <section class="cat-section" data-cat="ext">
+    <div class="cat-h">
+      <h2>🪵 Exterior Services <span class="cat-tally"></span></h2>
+      <p>Decks, fences, gutters, mailboxes, and the curb-appeal grind.</p>
+    </div>
+    <div class="cat-grid">
+
+      <article class="cat-card" data-name="Exterior Refresh" data-cat="ext">
+        <div class="cat-emoji">🏡</div>
+        <h3>Exterior Refresh</h3>
+        <p class="desc">Gutter cleaning, surface pressure washing, and minor hardware tight-ups.</p>
+        <div class="meta"><span class="price">$299</span><span class="dur">4 HRS</span></div>
+        <a href="booking.html" class="btn wide">Book this →</a>
+      </article>
+
+      <article class="cat-card" data-name="Fence Patch-Up" data-cat="ext">
+        <span class="cat-badge">POPULAR</span>
+        <div class="cat-emoji">🪚</div>
+        <h3>Fence Patch-Up</h3>
+        <p class="desc">Replace broken pickets, tighten hinges, and adjust gate alignment.</p>
+        <div class="meta"><span class="price">$449</span><span class="dur">4 HRS</span></div>
+        <a href="booking.html" class="btn wide">Book this →</a>
+      </article>
+
+      <article class="cat-card" data-name="Deck Revive" data-cat="ext">
+        <span class="cat-badge">BEST VALUE</span>
+        <div class="cat-emoji">🪵</div>
+        <h3>Deck Revive</h3>
+        <p class="desc">Small deck repair, pressure wash, sand, and stain (up to 300 sq ft).</p>
+        <div class="meta"><span class="price">$599</span><span class="dur">4 HRS</span></div>
+        <a href="booking.html" class="btn wide">Book this →</a>
+      </article>
+
+      <article class="cat-card" data-name="Power Wash Boost" data-cat="ext">
+        <div class="cat-emoji">💦</div>
+        <h3>Power Wash Boost</h3>
+        <p class="desc">Driveway, walkway, or patio pressure washing.</p>
+        <div class="meta"><span class="price">$149</span><span class="dur">1.5 HRS</span></div>
+        <a href="booking.html" class="btn wide">Book this →</a>
+      </article>
+
+      <article class="cat-card" data-name="Mailbox Refresh" data-cat="ext">
+        <div class="cat-emoji">📬</div>
+        <h3>Mailbox Refresh</h3>
+        <p class="desc">Install new mailbox or repair existing post and address numbers.</p>
+        <div class="meta"><span class="price">$129</span><span class="dur">1 HR</span></div>
+        <a href="booking.html" class="btn wide">Book this →</a>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- HOME ORGANIZATION & SPECIALTY -->
+  <section class="cat-section" data-cat="org">
+    <div class="cat-h">
+      <h2>📦 Home Organization &amp; Specialty <span class="cat-tally"></span></h2>
+      <p>Closets, cabinets, baby-proofing, pet doors — the personal-touch projects.</p>
+    </div>
+    <div class="cat-grid">
+
+      <article class="cat-card" data-name="Pet Door Install" data-cat="org">
+        <div class="cat-emoji">🐕</div>
+        <h3>Pet Door Install</h3>
+        <p class="desc">Install pet door into a standard wood door (up to 12x12 panel).</p>
+        <div class="meta"><span class="price">$199</span><span class="dur">2 HRS</span></div>
+        <a href="booking.html" class="btn wide">Book this →</a>
+      </article>
+
+      <article class="cat-card" data-name="Baby Proofing Package" data-cat="org">
+        <div class="cat-emoji">🍼</div>
+        <h3>Baby Proofing Package</h3>
+        <p class="desc">Secure heavy furniture, install safety locks, and anchor items.</p>
+        <div class="meta"><span class="price">$179</span><span class="dur">2 HRS</span></div>
+        <a href="booking.html" class="btn wide">Book this →</a>
+      </article>
+
+      <article class="cat-card" data-name="Closet Storage Setup" data-cat="org">
+        <div class="cat-emoji">👔</div>
+        <h3>Closet Storage Setup</h3>
+        <p class="desc">Install adjustable shelving, rods, and organization systems.</p>
+        <div class="meta"><span class="price">$199</span><span class="dur">2.5 HRS</span></div>
+        <a href="booking.html" class="btn wide">Book this →</a>
+      </article>
+
+      <article class="cat-card" data-name="Cabinet Hardware Refresh" data-cat="org">
+        <div class="cat-emoji">🪛</div>
+        <h3>Cabinet Hardware Refresh</h3>
+        <p class="desc">Replace cabinet knobs, pulls, and hinges.</p>
+        <div class="meta"><span class="price">$129</span><span class="dur">1.5 HRS</span></div>
+        <a href="booking.html" class="btn wide">Book this →</a>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- HOURLY BLOCKS -->
+  <section class="cat-section" data-cat="hourly">
+    <div class="cat-h">
+      <h2>⏱️ Flexible Hourly Blocks <span class="cat-tally"></span></h2>
+      <p>For lists that don't match a fixed bundle. You write the list, we bring the tools.</p>
+    </div>
+    <div class="cat-grid">
+
+      <article class="cat-card" data-name="Quick Fix Block" data-cat="hourly">
+        <div class="cat-emoji">⚡</div>
+        <h3>Quick Fix Block</h3>
+        <p class="desc">2-hour block for small tasks and miscellaneous repairs.</p>
+        <div class="meta"><span class="price">$179</span><span class="dur">2 HRS · 1 CREW</span></div>
+        <a href="booking.html" class="btn wide">Reserve →</a>
+      </article>
+
+      <article class="cat-card pop" data-name="Half Day Block" data-cat="hourly">
+        <span class="cat-badge">MOST BOOKED</span>
+        <div class="cat-emoji">🕓</div>
+        <h3>Half Day Block</h3>
+        <p class="desc">4-hour block for medium-sized projects or multiple tasks.</p>
+        <div class="meta"><span class="price">$279</span><span class="dur">4 HRS · 1 CREW</span></div>
+        <a href="booking.html" class="btn wide">Reserve →</a>
+      </article>
+
+      <article class="cat-card" data-name="Full Day Block" data-cat="hourly">
+        <div class="cat-emoji">🌅</div>
+        <h3>Full Day Block</h3>
+        <p class="desc">8-hour block for major projects or full-day labor.</p>
+        <div class="meta"><span class="price">$499</span><span class="dur">8 HRS · 1 CREW</span></div>
+        <a href="booking.html" class="btn wide">Reserve →</a>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ADD-ONS -->
+  <section class="cat-section" data-cat="addon">
+    <div class="cat-h">
+      <h2>➕ Add-Ons <span class="cat-tally"></span></h2>
+      <p>Tack onto any rescue while we're already there. Multiple quantities available — most cap at 10 per visit.</p>
+    </div>
+    <div class="cat-grid">
+
+      <article class="cat-card" data-name="Add-On: Headlight Restore" data-cat="addon">
+        <span class="cat-badge">ADD-ON</span>
+        <div class="cat-emoji">🚗</div>
+        <h3>Headlight Restore</h3>
+        <p class="desc">Restore, sand, polish, and UV seal your vehicle's headlights while we're on site.</p>
+        <div class="meta"><span class="price">$120</span><span class="dur">1 HR · EACH</span></div>
+        <a href="booking.html" class="btn wide">Add this →</a>
+      </article>
+
+      <article class="cat-card" data-name="Add-On: Fixture Swap" data-cat="addon">
+        <span class="cat-badge">ADD-ON</span>
+        <div class="cat-emoji">💡</div>
+        <h3>Extra Fixture Swap</h3>
+        <p class="desc">Additional fixture swap beyond your initial quote.</p>
+        <div class="meta"><span class="price">$89</span><span class="dur">45 MIN · EACH</span></div>
+        <a href="booking.html" class="btn wide">Add this →</a>
+      </article>
+
+      <article class="cat-card" data-name="Add-On: Power Wash" data-cat="addon">
+        <span class="cat-badge">ADD-ON</span>
+        <div class="cat-emoji">💦</div>
+        <h3>Extra Power Wash Area</h3>
+        <p class="desc">Additional area pressure washing beyond your initial quote.</p>
+        <div class="meta"><span class="price">$99</span><span class="dur">1 HR · EACH</span></div>
+        <a href="booking.html" class="btn wide">Add this →</a>
+      </article>
+
+      <article class="cat-card" data-name="Add-On: Caulking" data-cat="addon">
+        <span class="cat-badge">ADD-ON</span>
+        <div class="cat-emoji">🛁</div>
+        <h3>Extra Caulking Repair</h3>
+        <p class="desc">Additional small caulking repair beyond your initial quote.</p>
+        <div class="meta"><span class="price">$79</span><span class="dur">45 MIN · EACH</span></div>
+        <a href="booking.html" class="btn wide">Add this →</a>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cat-cta">
+    <h3>Don't see exactly what you need?</h3>
+    <p>Ranger can quote a custom rescue from a photo and a few details. Same flat-price, same-week availability.</p>
+    <a href="booking.html" class="btn lg">Start with Ranger →</a>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site">
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img src="assets/logo.png" alt="ATX Home Rescue"/>
+        <p>Flat-priced handyman &amp; home-care for Northwest Austin. Repair. Remodel. Reclaim your weekends.</p>
+        <div class="foot-contact">
+          📞 <a href="tel:+17373789595">(737) 378-9595</a><br/>
+          ✉ <a href="mailto:sales@atxhomerescue.com">sales@atxhomerescue.com</a><br/>
+          📍 Northwest Austin, TX
+        </div>
+      </div>
+      <div>
+        <h5>Packages</h5>
+        <a href="index.html#packages">Featured 6</a>
+        <a href="packages.html#">All packages</a>
+        <a href="packages.html?cat=bundles">Bundles</a>
+        <a href="packages.html?cat=hourly">Hourly blocks</a>
+        <a href="packages.html?cat=addon">Add-ons</a>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <a href="index.html#how">How it works</a>
+        <a href="index.html#gallery">Recent work</a>
+        <a href="index.html#reviews">Reviews</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="booking.html">Contact</a>
+      </div>
+      <div>
+        <h5>Service area</h5>
+        <div class="mono" style="font-size:12px;line-height:2;color:#cfd9e3">
+          78726 · 78727 · 78729<br/>
+          78730 · 78731 · 78750 · 78759<br/>
+        </div>
+        <div style="margin-top:14px;color:#cfd9e3;line-height:1.6">
+          Anderson Mill · Jester · Great Hills ·<br/>
+          Balcones · Spicewood · Steiner Ranch (soon)
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© 2026 ATX Home Rescue. All rights reserved.</div>
+      <div style="display:flex;gap:18px">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="scripts/i18n.js"></script>
+<script src="scripts/packages.js"></script>
+<script src="scripts/ranger-shared.js"></script>
+<script src="scripts/ranger-agent.js"></script>
+<script src="scripts/ranger-widget.js" defer></script>
+</body>
+</html>

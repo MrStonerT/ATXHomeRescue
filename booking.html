@@ -4,6 +4,8 @@
 <meta charset="utf-8"/>
 <title>Book your rescue — ATX Home Rescue</title>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; script-src 'self'; frame-src https://clienthub.getjobber.com; connect-src 'self' https://ranger-api.atxhomerescue.workers.dev http://localhost:8787; object-src 'none'; base-uri 'self'; form-action 'self';"/>
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin"/>
 <meta name="description" content="Book a flat-priced handyman rescue in Northwest Austin. Describe your project, get a price, and pick a same-week slot."/>
 <meta name="robots" content="noindex"/>
 <link rel="canonical" href="https://atxhomerescue.com/booking.html"/>
@@ -13,6 +15,7 @@
 <link rel="stylesheet" href="styles/base.css"/>
 <link rel="stylesheet" href="styles/layout.css"/>
 <link rel="stylesheet" href="styles/booking.css"/>
+<link rel="stylesheet" href="styles/ranger.css"/>
 </head>
 <body>
 
@@ -26,7 +29,9 @@
       </div>
     </a>
     <a href="index.html" class="back" id="backLink">← Back to site</a>
-    <button class="lang-toggle" id="langToggle" aria-label="Language" style="margin-left:auto"><span class="lang-flag">EN</span> / <span class="lang-flag off">ES</span></button>
+    <button class="lang-toggle" id="langToggle" aria-label="Language" style="margin-left:auto">
+      <span class="lang-flag">EN</span> / <span class="lang-flag off">ES</span>
+    </button>
   </div>
 </header>
 
@@ -35,21 +40,8 @@
 </section>
 
 <main class="shell">
-  <!-- CHAT SIDE -->
-  <section class="panel chat-wrap">
-    <div class="chat-head">
-      <div class="avatar">R</div>
-      <div class="name"><span id="rangerName">Rescue Ranger</span><small id="rangerSub">AI CONCIERGE · ATX HOME RESCUE</small></div>
-      <div class="dot-live"></div>
-    </div>
-    <div class="chat-body" id="chatBody"></div>
-    <div class="chat-input">
-      <button class="iconbtn" id="attachBtn" title="Attach photo">📎</button>
-      <input id="chatInput" placeholder="Type a message…"/>
-      <button class="send" id="chatSend">↑</button>
-    </div>
-    <div class="chat-foot" id="chatFoot"><span style="color:var(--orange)">●</span> Ranger · powered by ATX Home Rescue · avg reply 3s</div>
-  </section>
+  <!-- CHAT SIDE — Ranger Agent mounts here -->
+  <section class="panel chat-wrap" id="chatWrap"></section>
 
   <!-- SUMMARY SIDE -->
   <aside class="summary">
@@ -58,6 +50,11 @@
       <h2 class="sum-title" id="sumTitle">—</h2>
       <div class="sum-price" id="sumPrice">—</div>
       <div class="sum-meta" id="sumMeta">Ranger will match this</div>
+
+      <div class="sum-section" id="sumDetailsSec" style="display:none">
+        <h4 id="sumDetailsLbl">What Ranger knows</h4>
+        <div id="sumDetails" class="sum-details"></div>
+      </div>
 
       <div class="sum-section" id="sumInclSec" style="display:none">
         <h4 id="inclLbl">What's included</h4>
@@ -69,14 +66,9 @@
         <div class="uploads" id="sumPhotos"></div>
       </div>
 
-      <div class="sum-section" id="sumSlotSec" style="display:none">
-        <h4 id="slotLbl">Scheduled</h4>
-        <div class="sum-slot" id="sumSlot"><span class="ic">📅</span><span id="sumSlotText">—</span></div>
-      </div>
-
-      <div class="sum-section" id="sumTotalsSec" style="display:none">
-        <h4 id="totalsLbl">Payment</h4>
-        <div class="sum-totals" id="sumTotals"></div>
+      <div class="sum-section" id="sumContactSec" style="display:none">
+        <h4 id="contactLbl">Your info</h4>
+        <div id="sumContact"></div>
       </div>
 
       <div class="sum-section" style="color:var(--ink-soft);font-size:12px;line-height:1.5">
@@ -87,6 +79,9 @@
 </main>
 
 <script src="scripts/i18n.js"></script>
+<script src="scripts/jobber-config.js"></script>
+<script src="scripts/ranger-shared.js"></script>
+<script src="scripts/ranger-agent.js"></script>
 <script src="scripts/booking.js"></script>
 </body>
 </html>
