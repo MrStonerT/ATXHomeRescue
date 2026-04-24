@@ -42,8 +42,9 @@
       document.body.appendChild(host);
     }
     _tsWidgetId = turnstile.render('#cf-turnstile', {
-      sitekey:  TURNSTILE_SITEKEY,
-      size:     'invisible',
+      sitekey:    TURNSTILE_SITEKEY,
+      appearance: 'interaction-only',
+      execution:  'execute',
       callback: function (token) {
         var rs = _tsResolvers; _tsResolvers = [];
         rs.forEach(function (r) { r(token); });
