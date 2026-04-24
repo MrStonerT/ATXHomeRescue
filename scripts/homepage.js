@@ -72,6 +72,7 @@ setInterval(() => {
 const I18N_FIELDS = [
   { s: '.announce', k: 'announce' },
   { s: 'header.site .nav-links a[href="#packages"]', k: 'nav.packages' },
+  { s: 'header.site .nav-links a[href="packages.html"]', k: 'nav.allpkg' },
   { s: 'header.site .nav-links a[href="#how"]', k: 'nav.how' },
   { s: 'header.site .nav-links a[href="#gallery"]', k: 'nav.work' },
   { s: 'header.site .nav-links a[href="#reviews"]', k: 'nav.reviews' },
@@ -314,12 +315,13 @@ function handleSend(text) {
   setTimeout(() => addBubble('Got it — let me match that to a bundle…'), 500);
   setTimeout(() => {
     const low = text.toLowerCase();
-    let match = { name: 'Half-Day Rescue Block', price: '$249', dur: '4 hrs' };
-    if      (low.includes('deck'))                                          match = { name: 'Deck Revive',        price: '$599', dur: '½ day' };
-    else if (low.includes('tv'))                                            match = { name: 'TV Mount Pro',       price: '$149', dur: '1 hr' };
-    else if (low.includes('mount') || low.includes('shelves'))              match = { name: 'Move-in Rescue',     price: '$389', dur: '3 hrs' };
-    else if (low.includes('smart') || low.includes('camera') || low.includes('thermostat')) match = { name: 'Smart Home Starter', price: '$329', dur: '2 hrs' };
-    else if (low.includes('fence'))                                         match = { name: 'Fence Patch-Up',    price: '$449', dur: '½ day' };
+    let match = { name: 'Half-Day Rescue Block', price: '$279', dur: '4 hrs' };
+    if      (low.includes('deck'))                                          match = { name: 'Deck Revive',         price: '$599', dur: '½ day' };
+    else if (low.includes('tv'))                                            match = { name: 'TV Mount Pro',        price: '$149', dur: '1 hr' };
+    else if (low.includes('mount') || low.includes('shelves'))              match = { name: 'Move-in Rescue',      price: '$389', dur: '3 hrs' };
+    else if (low.includes('filter') || low.includes('detector') || low.includes('spring') || low.includes('ac') || low.includes('a/c')) match = { name: 'Spring Home Refresh', price: '$179', dur: '2 hrs' };
+    else if (low.includes('gallery') || low.includes('art') || low.includes('hang'))        match = { name: 'Gallery Wall',        price: '$199', dur: '1.5 hrs' };
+    else if (low.includes('fence'))                                         match = { name: 'Fence Patch-Up',      price: '$449', dur: '½ day' };
     addBubble(`<b>${match.name}</b> · <span style="color:var(--orange);font-weight:800">${match.price}</span> · ${match.dur}<br/><small>Sound right? I'll pull up open slots next.</small>`);
   }, 1300);
 }
@@ -336,6 +338,15 @@ document.querySelectorAll('.cat').forEach(c => {
     document.querySelectorAll('.cat').forEach(x => x.classList.remove('on'));
     c.classList.add('on');
   };
+});
+
+/* ---------- ZIP form ---------- */
+document.querySelector('.zip-form').addEventListener('submit', checkZip);
+
+/* ---------- Float button ---------- */
+const floatBtn = document.querySelector('.float-agent');
+if (floatBtn) floatBtn.addEventListener('click', () => {
+  document.getElementById('chat').scrollIntoView({ behavior: 'smooth', block: 'center' });
 });
 
 /* ---------- Smooth scroll ---------- */

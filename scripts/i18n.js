@@ -155,8 +155,6 @@ const I18N = {
   },
 
   es: {
-
-  es: {
     /* ---- Homepage ---- */
     'announce': '⚡ Reservando esta semana en el noroeste de Austin · <b>Precios fijos, sin estimados.</b> Servimos 78726, 78727, 78729, 78730, 78731, 78750, 78759.',
     'nav.packages': 'Paquetes',

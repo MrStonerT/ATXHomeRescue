@@ -226,7 +226,7 @@
 .pkg .dur { font-family: 'JetBrains Mono'; font-size: 11px; color: var(--ink-soft); text-transform: uppercase; letter-spacing: .08em; }
 
 /* ---------- Hourly blocks ---------- */
-.hourly { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 40px; }
+.hourly { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 40px; }
 .block { padding: 24px; background: #fff; border: 1px solid var(--rule); position: relative; }
 .block.pop { border: 2px solid var(--orange); }
 .block .pop-tag {

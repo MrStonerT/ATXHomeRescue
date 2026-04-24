@@ -11,3 +11,32 @@ desktop.ini
 
 # Logs
 *.log
+
+# Secrets / env
+.env
+.env.*
+!.env.example
+
+# Dependencies
+node_modules/
+
+# Worker / infra — MUST NEVER land in this public static repo
+wrangler.toml
+.wrangler/
+.dev.vars
+worker.js
+worker/
+api/
+src/worker.js
+src/system-prompt.md
+src/tools.js
+src/anthropic.js
+src/rate-limit.js
+src/services.json
+src/system-prompt-loader.js
+
+# Internal notes / runbooks
+internal-docs/
+SECURITY-HEADERS.md
+RESCUE_RANGER_PLAN.md
+*.private.md
