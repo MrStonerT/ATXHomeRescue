@@ -13,6 +13,69 @@
   const CONV_KEY_PREFIX = 'atx_conv_';
   const CONV_TTL_MS     = 7 * 24 * 60 * 60 * 1000;
 
+  /* ---------- Cloudflare Turnstile (bot check) ----------
+   * Renders an invisible widget once, then returns a fresh token on each
+   * call. If the Turnstile script fails to load, resolves null and the
+   * Worker will reject the request (fail closed in prod). */
+  const TURNSTILE_SITEKEY = '0x4AAAAAADCr8SlpSMhd_MqP';
+  let _tsWidgetId = null;
+  let _tsResolvers = [];
+
+  function _waitForTurnstile() {
+    return new Promise(function (resolve) {
+      if (typeof turnstile !== 'undefined') return resolve(true);
+      var waited = 0;
+      var iv = setInterval(function () {
+        if (typeof turnstile !== 'undefined') { clearInterval(iv); resolve(true); }
+        else if ((waited += 50) >= 10000) { clearInterval(iv); resolve(false); }
+      }, 50);
+    });
+  }
+
+  function _ensureWidget() {
+    if (_tsWidgetId !== null) return;
+    if (typeof turnstile === 'undefined') return;
+    var host = document.getElementById('cf-turnstile');
+    if (!host) {
+      host = document.createElement('div');
+      host.id = 'cf-turnstile';
+      document.body.appendChild(host);
+    }
+    _tsWidgetId = turnstile.render('#cf-turnstile', {
+      sitekey:  TURNSTILE_SITEKEY,
+      size:     'invisible',
+      callback: function (token) {
+        var rs = _tsResolvers; _tsResolvers = [];
+        rs.forEach(function (r) { r(token); });
+      },
+      'error-callback': function () {
+        var rs = _tsResolvers; _tsResolvers = [];
+        rs.forEach(function (r) { r(null); });
+      },
+      'expired-callback': function () {
+        if (_tsWidgetId !== null) turnstile.reset(_tsWidgetId);
+      },
+    });
+  }
+
+  async function getTurnstileToken() {
+    var ready = await _waitForTurnstile();
+    if (!ready) return null;
+    _ensureWidget();
+    if (_tsWidgetId === null) return null;
+    return new Promise(function (resolve) {
+      _tsResolvers.push(resolve);
+      try { turnstile.execute(_tsWidgetId); }
+      catch (e) { _tsResolvers = _tsResolvers.filter(function (r) { return r !== resolve; }); resolve(null); }
+      setTimeout(function () {
+        if (_tsResolvers.indexOf(resolve) !== -1) {
+          _tsResolvers = _tsResolvers.filter(function (r) { return r !== resolve; });
+          resolve(null);
+        }
+      }, 15000);
+    });
+  }
+
   /* ---------- RangerClient ---------- */
   function RangerClient() {
     this._listeners = {};
@@ -28,12 +91,13 @@
   RangerClient.prototype.send = async function (messages, context) {
     context = context || {};
     var self = this;
+    var turnstileToken = await getTurnstileToken();
     var resp;
     try {
       resp = await fetch(WORKER_BASE + '/chat', {
         method:  'POST',
         headers: { 'Content-Type': 'application/json' },
-        body:    JSON.stringify(Object.assign({ messages: messages }, context)),
+        body:    JSON.stringify(Object.assign({ messages: messages, turnstileToken: turnstileToken }, context)),
       });
     } catch (err) {
       self._emit('error', { message: 'Could not reach Ranger. Check your connection.' });
