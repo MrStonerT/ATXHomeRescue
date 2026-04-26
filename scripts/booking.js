@@ -36,8 +36,29 @@ function renderSummary(state) {
   if (state.package_name) {
     title.textContent = state.package_name;
     price.textContent = state.package_price || '—';
-    meta.textContent  = state.package_data?.duration || '';
+    // Show base price as a sub-label when add-ons bump the total
+    const baseFmt = state.package_data?.price_fmt || ('$' + state.package_data?.price);
+    const hasAddOns = state.add_ons?.length > 0;
+    meta.textContent = hasAddOns
+      ? `from ${baseFmt} · ${state.package_data?.duration || ''}`
+      : (state.package_data?.duration || '');
     renderSteps(3);
+
+    /* Add-ons sub-list */
+    const addonSec  = document.getElementById('sumAddonSec');
+    const addonList = document.getElementById('sumAddonList');
+    if (addonSec && addonList) {
+      if (hasAddOns) {
+        addonSec.style.display = '';
+        addonList.innerHTML = state.add_ons.map(a =>
+          `<div class="sum-field-row sum-field-enter">
+             <span class="sum-field-lbl">+ ${a.name}</span>
+             <span class="sum-field-val">$${a.price}</span>
+           </div>`).join('');
+      } else {
+        addonSec.style.display = 'none';
+      }
+    }
 
     /* What's included */
     const inclSec = document.getElementById('sumInclSec');
@@ -53,6 +74,8 @@ function renderSummary(state) {
     title.textContent = '—';
     price.textContent = '—';
     meta.textContent  = t('sumEmpty');
+    const addonSec = document.getElementById('sumAddonSec');
+    if (addonSec) addonSec.style.display = 'none';
     document.getElementById('sumInclSec').style.display = 'none';
   }
 

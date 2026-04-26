@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Book a rescue — ATX Home Rescue</title>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; script-src 'self'; frame-src https://clienthub.getjobber.com; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self';"/>
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin"/>
+<meta name="description" content="Book a flat-priced handyman rescue in Northwest Austin. Select your package, pick a few dates, and confirm with Jobber."/>
+<meta name="robots" content="noindex"/>
+<link rel="canonical" href="https://atxhomerescue.com/request.html"/>
+<link rel="icon" href="assets/logo.png"/>
+<link rel="apple-touch-icon" href="assets/logo.png"/>
+<link rel="stylesheet" href="styles/tokens.css"/>
+<link rel="stylesheet" href="styles/base.css"/>
+<link rel="stylesheet" href="styles/layout.css"/>
+<link rel="stylesheet" href="styles/request.css"/>
+</head>
+<body>
+
+<header class="site">
+  <div class="container nav">
+    <a href="index.html" class="brand">
+      <img src="assets/logo.png" alt="ATX Home Rescue"/>
+      <div>
+        <div class="wordmark">ATX Home Rescue</div>
+        <div class="tag">Repair · Remodel · Reclaim</div>
+      </div>
+    </a>
+    <nav class="nav-links">
+      <a href="packages.html">All packages</a>
+      <a href="index.html#how">How it works</a>
+      <a href="index.html#faq">FAQ</a>
+    </nav>
+    <a href="booking.html" class="btn ghost" style="font-size:13px">Chat with Ranger →</a>
+  </div>
+</header>
+
+<!-- Loading state -->
+<div id="reqLoading" style="text-align:center;padding:80px 28px;color:var(--ink-soft)">Loading…</div>
+
+<!-- Error state -->
+<div id="reqLoadError" style="display:none;max-width:480px;margin:80px auto;padding:0 28px;text-align:center">
+  <div style="font-size:40px;margin-bottom:16px">🔧</div>
+  <h2 class="slab" style="margin:0 0 10px">Package not found</h2>
+  <p class="req-load-msg" style="color:var(--ink-soft);margin-bottom:6px">That package doesn't exist in our catalog.</p>
+  <p class="req-load-sub" style="color:var(--ink-soft);font-size:13px;margin-bottom:28px"></p>
+  <a href="packages.html" class="btn">Browse all packages →</a>
+</div>
+
+<!-- Main form shell (hidden until catalog loads) -->
+<div id="reqShell" class="req-shell" style="display:none">
+
+  <!-- ===== FORM SIDE ===== -->
+  <main>
+    <div style="margin-bottom:28px">
+      <div style="font-family:'Oswald';text-transform:uppercase;letter-spacing:.18em;font-size:12px;color:var(--orange);margin-bottom:6px">Direct booking</div>
+      <h1 class="slab" style="font-size:40px;margin:0 0 10px">Book this rescue</h1>
+      <a href="booking.html" style="font-size:13px;color:var(--ink-soft);text-decoration:underline">Not sure what you need? Chat with Ranger →</a>
+    </div>
+
+    <form id="reqForm" novalidate>
+
+      <!-- Add-ons -->
+      <div id="reqAddOnsSection">
+        <div class="req-form-heading">Add-ons (optional, max 2)</div>
+        <div class="req-addon-section">
+          <div id="reqAddOnsContainer"></div>
+          <div class="req-addon-maxnote" id="reqAddonMaxNote">Max 2 add-ons per booking.</div>
+        </div>
+      </div>
+
+      <!-- Contact info -->
+      <div class="req-form-heading">Your contact info</div>
+      <div class="req-field-group">
+        <div class="req-field">
+          <label for="reqFirstName">First name *</label>
+          <input id="reqFirstName" type="text" autocomplete="given-name" required/>
+        </div>
+        <div class="req-field">
+          <label for="reqLastName">Last name *</label>
+          <input id="reqLastName" type="text" autocomplete="family-name" required/>
+        </div>
+        <div class="req-field">
+          <label for="reqPhone">Phone *</label>
+          <input id="reqPhone" type="tel" autocomplete="tel" placeholder="(512) 555-0100" required/>
+        </div>
+        <div class="req-field">
+          <label for="reqEmail">Email *</label>
+          <input id="reqEmail" type="email" autocomplete="email" required/>
+        </div>
+      </div>
+
+      <!-- Service address -->
+      <div class="req-form-heading">Service address</div>
+      <div class="req-field-group">
+        <div class="req-field full">
+          <label for="reqStreet">Street address *</label>
+          <input id="reqStreet" type="text" autocomplete="street-address" required/>
+        </div>
+        <div class="req-field full">
+          <label for="reqUnit">Unit / Apt (optional)</label>
+          <input id="reqUnit" type="text" autocomplete="address-line2"/>
+        </div>
+        <div class="req-field">
+          <label for="reqCity">City *</label>
+          <input id="reqCity" type="text" autocomplete="address-level2" required/>
+        </div>
+        <div class="req-field">
+          <label for="reqState">State *</label>
+          <input id="reqState" type="text" autocomplete="address-level1" value="TX" required style="max-width:80px"/>
+        </div>
+        <div class="req-field">
+          <label for="reqZip">ZIP code *</label>
+          <input id="reqZip" type="text" autocomplete="postal-code" inputmode="numeric" maxlength="5" required/>
+          <span class="field-error" id="reqZipError">We only serve 78726, 78727, 78729, 78730, 78731, 78750, 78759.</span>
+        </div>
+      </div>
+
+      <!-- Preferred dates -->
+      <div class="req-form-heading">Preferred dates (pick up to 3)</div>
+      <p style="font-size:13px;color:var(--ink-soft);margin-bottom:12px">Give us a few options and we'll confirm whichever fits best — no phone tag.</p>
+      <div class="req-slot-list" id="reqSlotList"></div>
+      <button type="button" class="req-add-slot" id="reqAddSlot">+ Add another date</button>
+
+      <!-- Notes -->
+      <div class="req-form-heading" style="margin-top:28px">Notes for the crew (optional)</div>
+      <div class="req-field full">
+        <textarea id="reqNotes" rows="3" maxlength="500" placeholder="Anything we should know — access codes, parking, specific concerns…"></textarea>
+      </div>
+
+      <!-- Photos -->
+      <div class="req-form-heading">Photos (optional)</div>
+      <p style="font-size:13px;color:var(--ink-soft);margin-bottom:10px">You'll re-attach these in the Jobber form — they help the crew prepare.</p>
+      <div class="req-photos-wrap" id="reqPhotosDrop" onclick="document.getElementById('reqPhotosInput').click()">
+        <span>📎 Tap to attach photos</span>
+        <input id="reqPhotosInput" type="file" accept="image/*" multiple/>
+        <div class="req-photo-list" id="reqPhotoList"></div>
+      </div>
+
+      <!-- Submit -->
+      <div class="req-submit-row">
+        <button type="submit" class="btn req-submit-btn">Review &amp; confirm →</button>
+        <div class="req-form-error" id="reqFormError"></div>
+      </div>
+
+    </form>
+  </main>
+
+  <!-- ===== PACKAGE SUMMARY ASIDE ===== -->
+  <aside class="req-aside">
+    <div class="panel">
+      <div class="req-pkg-emoji" id="reqPkgEmoji"></div>
+      <h2 class="req-pkg-name" id="reqPkgName"></h2>
+      <div class="req-pkg-badge" id="reqPkgBadge" style="display:none"></div>
+      <p class="req-pkg-desc" id="reqPkgDesc"></p>
+
+      <div class="req-addon-rows" id="reqAddonRows"></div>
+
+      <div class="req-total-bar">
+        <div class="req-total-lbl">Total</div>
+        <div>
+          <div class="req-total-val" id="reqTotalVal">—</div>
+          <div class="req-total-dur" id="reqTotalDur"></div>
+        </div>
+      </div>
+
+      <div style="display:none" id="reqPkgInclWrap">
+        <div style="font-family:'Oswald';text-transform:uppercase;font-size:11px;letter-spacing:.14em;color:var(--ink-soft);margin:14px 0 6px">What's included</div>
+        <ul class="req-pkg-incl" id="reqPkgIncl"></ul>
+      </div>
+
+      <div id="reqPkgNotes" style="display:none;font-size:12px;color:var(--ink-soft);font-style:italic;margin-top:12px;line-height:1.5"></div>
+    </div>
+
+    <div style="margin-top:16px;font-size:12px;color:var(--ink-soft);line-height:1.6;padding:0 2px">
+      Flat price. Materials included unless noted.<br/>
+      After we confirm your quote, a small deposit holds your slot — balance due when the job is done.
+    </div>
+  </aside>
+
+</div><!-- /req-shell -->
+
+<!-- ===== HANDOFF SCREEN ===== -->
+<div id="reqHandoff" class="req-handoff">
+  <main>
+    <h2 class="req-handoff-head">✅ Almost done</h2>
+    <p class="req-handoff-sub">Fill in the Jobber form below to lock in your request. Your details are shown on the right for reference — Jobber will ask for them again.</p>
+
+    <div class="req-jobber-wrap">
+      <iframe id="reqJobberIframe" src="about:blank"
+        class="req-jobber-iframe"
+        title="Confirm your request — Jobber"
+        allow="camera; microphone; clipboard-write"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <div class="req-finish-row">
+      <button class="btn req-finish-btn" id="reqFinishBtn" disabled>I've submitted the form →</button>
+      <div class="req-finish-hint">Click this after you submit the Jobber form above.</div>
+    </div>
+  </main>
+
+  <aside>
+    <div class="req-recap-panel">
+      <div class="req-recap-head">Your details</div>
+      <div id="reqRecapRows"></div>
+    </div>
+  </aside>
+</div>
+
+<!-- ===== DONE SCREEN ===== -->
+<div class="req-done" id="reqDone">
+  <div class="req-done-icon">🎉</div>
+  <h2>You're all set!</h2>
+  <p>We'll confirm your slot and send a small deposit invoice once the date is locked. Questions? Call <a href="tel:+17373789595">(737) 378-9595</a>.</p>
+  <a href="index.html" class="btn">← Back to home</a>
+</div>
+
+<!-- FOOTER -->
+<footer class="site">
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img src="assets/logo.png" alt="ATX Home Rescue"/>
+        <p>Flat-priced handyman &amp; home-care for Northwest Austin. Repair. Remodel. Reclaim your weekends.</p>
+        <div class="foot-contact">
+          📞 <a href="tel:+17373789595">(737) 378-9595</a><br/>
+          ✉ <a href="mailto:sales@atxhomerescue.com">sales@atxhomerescue.com</a><br/>
+          📍 Northwest Austin, TX
+        </div>
+      </div>
+      <div>
+        <h5>Packages</h5>
+        <a href="index.html#packages">Featured 6</a>
+        <a href="packages.html">All packages</a>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <a href="index.html#how">How it works</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="booking.html">Talk to Ranger</a>
+      </div>
+      <div>
+        <h5>Service area</h5>
+        <div class="mono" style="font-size:12px;line-height:2;color:#cfd9e3">
+          78726 · 78727 · 78729<br/>
+          78730 · 78731 · 78750 · 78759
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© 2026 ATX Home Rescue. All rights reserved.</div>
+      <div style="display:flex;gap:18px">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="scripts/i18n.js"></script>
+<script src="scripts/jobber-config.js"></script>
+<script src="scripts/request.js"></script>
+</body>
+</html>

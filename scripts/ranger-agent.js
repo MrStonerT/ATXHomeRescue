@@ -141,6 +141,23 @@ const RangerAgent = (() => {
 
       const card = document.createElement('div');
       card.className = 'rg-bubble rg-them rg-card';
+      const addOns   = pkg.add_ons || [];
+      const priceSection = addOns.length
+        ? `<div class="rg-card-breakdown">
+             <div class="rg-card-breakdown-row">
+               <span>${name}</span><span>${pkg.price_fmt}</span>
+             </div>
+             ${addOns.map(a => `
+             <div class="rg-card-breakdown-row rg-card-addon">
+               <span>+ ${a.name}</span><span>$${a.price}</span>
+             </div>`).join('')}
+             <div class="rg-card-breakdown-total">
+               <span>Total</span>
+               <span>${pkg.total_fmt}<small class="rg-card-dur">${pkg.duration}</small></span>
+             </div>
+           </div>`
+        : `<div class="rg-card-price">${pkg.price_fmt}<span class="rg-card-dur">${pkg.duration}</span></div>`;
+
       card.innerHTML = `
         <div class="rg-card-head">
           <span class="rg-card-emoji">${pkg.emoji}</span>
@@ -149,7 +166,7 @@ const RangerAgent = (() => {
             ${pkg.badge ? `<span class="rg-card-badge">${pkg.badge}</span>` : ''}
           </div>
         </div>
-        <div class="rg-card-price">${pkg.total_fmt || pkg.price_fmt}<span class="rg-card-dur">${pkg.duration}</span></div>
+        ${priceSection}
         ${includes.length ? `<ul class="rg-card-includes">${includes.map(i => `<li>${i}</li>`).join('')}</ul>` : ''}
         ${notes ? `<div class="rg-card-notes">${notes}</div>` : ''}
       `;
@@ -162,9 +179,28 @@ const RangerAgent = (() => {
     function renderJobberHandoff(data) {
       const l = getCurrentLang();
       const conf = l === 'es' ? data.confirmation_es : data.confirmation_en;
-      addBubble(`<b>✅ ${conf}</b>`, 'rg-them');
+      addBubble(`${conf}`, 'rg-them');
 
       if (data.url) {
+        // Show a recap of what Ranger collected so the user can copy it
+        // into Jobber's form — prefill via URL params is not supported by Jobber.
+        const recap = document.createElement('div');
+        recap.className = 'rg-jobber-recap';
+        const recapFields = [];
+        const st = summaryStore ? summaryStore.state : {};
+        if (st.contact_name)  recapFields.push({ lbl: l === 'es' ? 'Nombre' : 'Name',  val: st.contact_name });
+        if (st.contact_phone) recapFields.push({ lbl: l === 'es' ? 'Teléfono' : 'Phone', val: st.contact_phone });
+        if (st.contact_email) recapFields.push({ lbl: l === 'es' ? 'Email' : 'Email',  val: st.contact_email });
+        if (st.zip)           recapFields.push({ lbl: 'ZIP', val: st.zip });
+        if (st.preferred_windows?.length) recapFields.push({ lbl: l === 'es' ? 'Fechas' : 'Dates', val: st.preferred_windows.join(', ') });
+        if (recapFields.length) {
+          recap.innerHTML = `<div class="rg-jobber-recap-label">${l === 'es' ? '📋 Tus datos — cópialos en el formulario:' : '📋 Your details — copy these into the form:'}</div>`
+            + recapFields.map(f =>
+              `<div class="rg-jobber-recap-row"><span>${f.lbl}</span><b>${escHtml(f.val)}</b></div>`
+            ).join('');
+          body.appendChild(recap);
+        }
+
         const wrap = document.createElement('div');
         wrap.className = 'rg-jobber-wrap';
 
@@ -180,22 +216,29 @@ const RangerAgent = (() => {
         const done = document.createElement('div');
         done.className = 'rg-jobber-manual';
         done.innerHTML = `
-          <button class="rg-btn" id="rgJobberDone">${t('jobberDone')}</button>
+          <button class="rg-btn" id="rgJobberDone" disabled>${t('jobberDone')}</button>
           <div class="rg-jobber-hint">${t('jobberDoneHint')}</div>
         `;
         body.appendChild(done);
 
+        // Enable the finish button after 6 seconds (time to fill the form)
+        // or immediately on Jobber's success postMessage — whichever comes first.
+        const doneBtn = done.querySelector('#rgJobberDone');
+        const enableTimer = setTimeout(() => { doneBtn.disabled = false; }, 6000);
+
         const onMsg = (e) => {
           if (/submit|complete|success|thank/i.test(String(e.data))) {
+            clearTimeout(enableTimer);
             cleanup(); showDone(data);
           }
         };
         const cleanup = () => {
           window.removeEventListener('message', onMsg);
+          if (recap.parentNode) recap.remove();
           wrap.remove(); done.remove();
         };
         window.addEventListener('message', onMsg);
-        done.querySelector('#rgJobberDone').onclick = () => { cleanup(); showDone(data); };
+        doneBtn.onclick = () => { clearTimeout(enableTimer); cleanup(); showDone(data); };
       }
 
       scroll();
@@ -204,11 +247,14 @@ const RangerAgent = (() => {
 
     function showDone(data) {
       const l = getCurrentLang();
+      // NOTE: we intentionally do NOT call summaryStore.reset() here.
+      // The right-side summary panel should remain visible with package + add-ons
+      // so the user can confirm what they requested after handoff.
       body.innerHTML = '';
       const el = document.createElement('div');
       el.className = 'rg-done';
       el.innerHTML = `
-        <div class="rg-done-icon">⏳</div>
+        <div class="rg-done-icon">✅</div>
         <h2>${t('requested')}</h2>
         <p>${t('requestedSub')}</p>
         <p><b>${data.sla}</b></p>

@@ -1,0 +1,1141 @@
+{
+  "service_area": {
+    "zips": [
+      "78726",
+      "78727",
+      "78729",
+      "78730",
+      "78731",
+      "78750",
+      "78759"
+    ],
+    "zone_en": "Northwest Austin",
+    "zone_es": "Noroeste de Austin",
+    "sla_en": "We confirm your date within 2 hours (7 AM – 9 PM).",
+    "sla_es": "Confirmamos tu fecha en menos de 2 horas (7 AM – 9 PM).",
+    "phone": "(737) 378-9595",
+    "email": "sales@atxhomerescue.com"
+  },
+  "packages": [
+    {
+      "id": "tv_mount_pro",
+      "name": "TV Mount Pro",
+      "name_es": "TV Mount Pro",
+      "emoji": "📺",
+      "category": "install",
+      "badge": "POPULAR",
+      "price": 149,
+      "full_day": false,
+      "duration": "1 hr",
+      "desc_en": "Professional mount for TVs up to 75\". Clean cable management and full setup.",
+      "desc_es": "Montaje profesional para TVs hasta 75\". Gestión de cables y configuración completa.",
+      "includes_en": [
+        "Mount hardware & installation",
+        "Cable management (surface)",
+        "Level check & tilt adjustment",
+        "Full power-on test"
+      ],
+      "includes_es": [
+        "Hardware y montaje",
+        "Gestión de cables (superficie)",
+        "Nivelación y ajuste de inclinación",
+        "Prueba de encendido"
+      ],
+      "notes_en": "Excludes mounting to concrete or brick. For in-wall cable hiding, book a Quick Fix Block.",
+      "notes_es": "Excluye montaje en concreto o ladrillo. Para ocultar cables en pared, reserva un bloque Quick Fix."
+    },
+    {
+      "id": "gallery_wall",
+      "name": "Gallery Wall",
+      "name_es": "Pared de Galería",
+      "emoji": "🎨",
+      "category": "install",
+      "badge": null,
+      "price": 199,
+      "full_day": false,
+      "duration": "1.5 hr",
+      "desc_en": "Up to 8 items hung perfectly level with anchors rated for the weight.",
+      "desc_es": "Hasta 8 piezas colgadas perfectamente niveladas con anclajes adecuados.",
+      "includes_en": [
+        "Layout planning",
+        "Stud finding + anchoring",
+        "Level hang for all pieces",
+        "Touch-up of any pilot holes"
+      ],
+      "includes_es": [
+        "Planificación de diseño",
+        "Localización de vigas y anclaje",
+        "Cuelgue nivelado",
+        "Retoque de huecos piloto"
+      ],
+      "notes_en": "Client provides all art/frames. Excludes items over 50 lbs each.",
+      "notes_es": "El cliente aporta todo el arte/marcos. Excluye piezas de más de 50 lbs cada una."
+    },
+    {
+      "id": "move_in_rescue",
+      "name": "Move-In Rescue",
+      "name_es": "Rescate Mudanza",
+      "emoji": "🛋",
+      "category": "install",
+      "badge": "POPULAR",
+      "price": 389,
+      "full_day": false,
+      "duration": "3 hr",
+      "desc_en": "Shelving, rod installation, art hanging, TV mount, and minor touch-ups — bring the list.",
+      "desc_es": "Repisas, cortineros, cuadros, TV y retoques — trae la lista.",
+      "includes_en": [
+        "Up to 3 hrs hands-on labor",
+        "TV mount (drywall)",
+        "Curtain rods & shelves",
+        "Art & mirror hanging",
+        "Minor patch touch-ups"
+      ],
+      "includes_es": [
+        "Hasta 3 hrs de trabajo",
+        "Montaje de TV (drywall)",
+        "Cortineros y repisas",
+        "Cuadros y espejos",
+        "Retoques menores"
+      ],
+      "notes_en": "Client provides a list of tasks beforehand for scope confirmation.",
+      "notes_es": "El cliente envía la lista de tareas con anticipación."
+    },
+    {
+      "id": "fixture_swap",
+      "name": "Fixture Swap",
+      "name_es": "Cambio de Luminaria",
+      "emoji": "💡",
+      "category": "install",
+      "badge": null,
+      "price": 129,
+      "full_day": false,
+      "duration": "1 hr",
+      "desc_en": "Replace existing light fixture using current wiring.",
+      "desc_es": "Reemplazar luminaria existente usando el cableado actual.",
+      "includes_en": [
+        "Remove old fixture",
+        "Install new fixture on existing wiring",
+        "Bulb test"
+      ],
+      "includes_es": [
+        "Retirar luminaria vieja",
+        "Instalar nueva en cableado existente",
+        "Prueba de bombilla"
+      ],
+      "notes_en": "Client provides the new fixture. Existing wiring must be in place. No panel work.",
+      "notes_es": "El cliente aporta la nueva luminaria. No incluye trabajo en tablero eléctrico."
+    },
+    {
+      "id": "ceiling_fan_replacement",
+      "name": "Ceiling Fan Replacement",
+      "name_es": "Cambio de Ventilador de Techo",
+      "emoji": "🌀",
+      "category": "install",
+      "badge": null,
+      "price": 149,
+      "full_day": false,
+      "duration": "1.5 hr",
+      "desc_en": "Replace existing fan on same wiring and ceiling mount.",
+      "desc_es": "Reemplazar ventilador existente en el mismo cableado y soporte.",
+      "includes_en": [
+        "Remove old fan",
+        "Install new fan on existing wiring",
+        "Balance check & test"
+      ],
+      "includes_es": [
+        "Retirar ventilador viejo",
+        "Instalar nuevo en cableado existente",
+        "Prueba de balance"
+      ],
+      "notes_en": "Client provides new fan. Existing wiring and junction box must be in place.",
+      "notes_es": "El cliente aporta el nuevo ventilador. Requiere cableado y caja de conexiones existentes."
+    },
+    {
+      "id": "blind_curtain_install",
+      "name": "Blind & Curtain Install",
+      "name_es": "Instalación de Persianas y Cortinas",
+      "emoji": "🪟",
+      "category": "install",
+      "badge": null,
+      "price": 129,
+      "full_day": false,
+      "duration": "1 hr",
+      "desc_en": "Install blinds, shades, or curtain rods — hardware included.",
+      "desc_es": "Instalar persianas, cortinas o barras — herrajes incluidos.",
+      "includes_en": [
+        "Brackets & hardware",
+        "Level install",
+        "Cord/wand setup"
+      ],
+      "includes_es": [
+        "Soportes y herrajes",
+        "Instalación nivelada",
+        "Configuración de cordón"
+      ],
+      "notes_en": "Client provides blinds/curtains. Up to 3 windows per booking.",
+      "notes_es": "El cliente aporta las persianas/cortinas. Hasta 3 ventanas por reserva."
+    },
+    {
+      "id": "door_hardware_refresh",
+      "name": "Door Hardware Refresh",
+      "name_es": "Renovación de Herrajes de Puerta",
+      "emoji": "🚪",
+      "category": "install",
+      "badge": null,
+      "price": 119,
+      "full_day": false,
+      "duration": "1 hr",
+      "desc_en": "Replace door handles, deadbolts, and hinges.",
+      "desc_es": "Reemplazar manijas, cerraduras y bisagras.",
+      "includes_en": [
+        "Remove old hardware",
+        "Install new handles/locks/hinges",
+        "Function test"
+      ],
+      "includes_es": [
+        "Retirar herrajes viejos",
+        "Instalar nuevas manijas/cerraduras/bisagras",
+        "Prueba de funcionamiento"
+      ],
+      "notes_en": "Client provides new hardware. Up to 2 doors per booking.",
+      "notes_es": "El cliente aporta los nuevos herrajes. Hasta 2 puertas por reserva."
+    },
+    {
+      "id": "door_adjustment",
+      "name": "Door Adjustment Package",
+      "name_es": "Ajuste de Puertas",
+      "emoji": "🚪",
+      "category": "install",
+      "badge": null,
+      "price": 119,
+      "full_day": false,
+      "duration": "1 hr",
+      "desc_en": "Fix sticking doors, track alignment, and hinge tightening.",
+      "desc_es": "Reparar puertas que rozan, alineación de rieles y ajuste de bisagras.",
+      "includes_en": [
+        "Diagnose sticking/drag cause",
+        "Hinge tightening or adjustment",
+        "Strike plate alignment",
+        "Plane/sand if needed"
+      ],
+      "includes_es": [
+        "Diagnosticar causa",
+        "Ajuste de bisagras",
+        "Alineación de pestillo",
+        "Cepillado si es necesario"
+      ],
+      "notes_en": "Up to 2 doors. Does not cover broken frames or major structural issues.",
+      "notes_es": "Hasta 2 puertas. No cubre marcos rotos ni problemas estructurales."
+    },
+    {
+      "id": "spring_home_refresh",
+      "name": "Spring Home Refresh",
+      "name_es": "Refresco de Primavera",
+      "emoji": "🌱",
+      "category": "maint",
+      "badge": "FEATURED",
+      "price": 179,
+      "full_day": false,
+      "duration": "2 hr",
+      "desc_en": "Air filter swap, AC condenser exterior cleaning, and detector battery check.",
+      "desc_es": "Cambio de filtro, limpieza exterior del condensador AC y revisión de baterías de detectores.",
+      "includes_en": [
+        "Replace up to 3 air filters (filters incl.)",
+        "Exterior AC condenser clean",
+        "Test & replace smoke/CO detector batteries"
+      ],
+      "includes_es": [
+        "Hasta 3 filtros de aire (filtros incl.)",
+        "Limpieza exterior del condensador",
+        "Revisión y cambio de baterías de detectores"
+      ],
+      "notes_en": "Filters included for standard sizes. Oversized filters may cost extra.",
+      "notes_es": "Filtros estándar incluidos. Filtros de tamaño especial pueden tener costo adicional."
+    },
+    {
+      "id": "home_safety_check",
+      "name": "Home Safety Check",
+      "name_es": "Revisión de Seguridad del Hogar",
+      "emoji": "🚨",
+      "category": "maint",
+      "badge": null,
+      "price": 99,
+      "full_day": false,
+      "duration": "1 hr",
+      "desc_en": "Test all smoke/CO detectors, replace batteries, and identify common home hazards.",
+      "desc_es": "Probar detectores de humo/CO, cambiar baterías e identificar riesgos comunes.",
+      "includes_en": [
+        "Full smoke/CO detector test",
+        "Battery replacement (batteries incl.)",
+        "Hazard walkthrough report"
+      ],
+      "includes_es": [
+        "Prueba completa de detectores",
+        "Cambio de baterías (incluidas)",
+        "Reporte de riesgos"
+      ],
+      "notes_en": null,
+      "notes_es": null
+    },
+    {
+      "id": "caulking_refresh",
+      "name": "Caulking Refresh",
+      "name_es": "Renovación de Sellado",
+      "emoji": "🛁",
+      "category": "maint",
+      "badge": null,
+      "price": 129,
+      "full_day": false,
+      "duration": "1.5 hr",
+      "desc_en": "Re-caulk kitchen and bathroom wet areas for a clean, water-tight finish.",
+      "desc_es": "Re-sellar zonas húmedas de cocina y baño para un acabado limpio y hermético.",
+      "includes_en": [
+        "Remove old caulk",
+        "Clean & prep surfaces",
+        "Apply fresh waterproof caulk",
+        "Smooth finish"
+      ],
+      "includes_es": [
+        "Retirar sellado viejo",
+        "Limpiar y preparar superficies",
+        "Aplicar sellado nuevo",
+        "Acabado liso"
+      ],
+      "notes_en": "Up to 2 wet areas (e.g. 1 tub + 1 kitchen sink).",
+      "notes_es": "Hasta 2 zonas húmedas."
+    },
+    {
+      "id": "weatherproofing",
+      "name": "Weatherproofing Package",
+      "name_es": "Impermeabilización",
+      "emoji": "🌬️",
+      "category": "maint",
+      "badge": null,
+      "price": 149,
+      "full_day": false,
+      "duration": "2 hr",
+      "desc_en": "Seal window/door drafts, install door sweeps, and add weather stripping.",
+      "desc_es": "Sellar corrientes en ventanas/puertas, instalar burletes y sellos.",
+      "includes_en": [
+        "Draft detection",
+        "Door sweep install",
+        "Weather stripping (materials incl.)",
+        "Window gap sealing"
+      ],
+      "includes_es": [
+        "Detección de corrientes",
+        "Instalación de burlete",
+        "Sellos para ventanas (materiales incl.)"
+      ],
+      "notes_en": "Up to 4 doors/windows.",
+      "notes_es": "Hasta 4 puertas/ventanas."
+    },
+    {
+      "id": "dryer_vent_cleaning",
+      "name": "Dryer Vent Cleaning",
+      "name_es": "Limpieza de Conducto de Secadora",
+      "emoji": "🔥",
+      "category": "maint",
+      "badge": null,
+      "price": 149,
+      "full_day": false,
+      "duration": "1.5 hr",
+      "desc_en": "Clean accessible dryer vent and ductwork to prevent fire hazards.",
+      "desc_es": "Limpiar el conducto accesible de la secadora para prevenir incendios.",
+      "includes_en": [
+        "Disconnect & clean lint trap",
+        "Brush & vacuum ductwork",
+        "Reconnect & test airflow"
+      ],
+      "includes_es": [
+        "Desconectar y limpiar trampa de pelusa",
+        "Cepillar y aspirar ducto",
+        "Reconectar y probar flujo de aire"
+      ],
+      "notes_en": "Accessible venting only (max ~20 ft duct run from appliance).",
+      "notes_es": "Solo ductos accesibles (máx. ~6 m desde el electrodoméstico)."
+    },
+    {
+      "id": "garage_tune_up",
+      "name": "Garage Tune-Up",
+      "name_es": "Mantenimiento de Garaje",
+      "emoji": "🚗",
+      "category": "maint",
+      "badge": null,
+      "price": 129,
+      "full_day": false,
+      "duration": "1 hr",
+      "desc_en": "Lubricate tracks, check safety sensors, and verify alignment.",
+      "desc_es": "Lubricar rieles, revisar sensores de seguridad y verificar alineación.",
+      "includes_en": [
+        "Lubricate rollers, hinges, tracks",
+        "Safety sensor test & alignment",
+        "Manual release test",
+        "Balance check"
+      ],
+      "includes_es": [
+        "Lubricar rodillos, bisagras, rieles",
+        "Prueba y alineación de sensores",
+        "Prueba de liberación manual",
+        "Verificación de balance"
+      ],
+      "notes_en": "Does not include opener replacement or motor repair.",
+      "notes_es": "No incluye reemplazo de motor o abridor."
+    },
+    {
+      "id": "ceiling_fan_clean",
+      "name": "Ceiling Fan Clean",
+      "name_es": "Limpieza de Ventilador de Techo",
+      "emoji": "🌀",
+      "category": "maint",
+      "badge": null,
+      "price": 109,
+      "full_day": false,
+      "duration": "1 hr",
+      "desc_en": "Deep clean and balance wobble on existing ceiling fans.",
+      "desc_es": "Limpieza profunda y corrección de vibración en ventiladores de techo.",
+      "includes_en": [
+        "Blade wipe-down",
+        "Motor housing clean",
+        "Balance weight adjustment"
+      ],
+      "includes_es": [
+        "Limpieza de aspas",
+        "Limpieza de carcasa",
+        "Ajuste de peso de balance"
+      ],
+      "notes_en": "Up to 2 fans.",
+      "notes_es": "Hasta 2 ventiladores."
+    },
+    {
+      "id": "drywall_patch",
+      "name": "Drywall Patch & Blend",
+      "name_es": "Parche y Textura de Drywall",
+      "emoji": "🧱",
+      "category": "paint",
+      "badge": null,
+      "price": 149,
+      "full_day": false,
+      "duration": "2 hr",
+      "desc_en": "Patch small holes, blend texture, and touch-up paint.",
+      "desc_es": "Parchar huecos pequeños, igualar textura y retocar pintura.",
+      "includes_en": [
+        "Patch compound & materials",
+        "Texture blend",
+        "Paint touch-up (client provides matching paint)"
+      ],
+      "includes_es": [
+        "Compuesto de parche y materiales",
+        "Igualación de textura",
+        "Retoque de pintura (cliente aporta pintura)"
+      ],
+      "notes_en": "Up to 3 holes ≤6\" each. Client provides paint for color match.",
+      "notes_es": "Hasta 3 huecos ≤15 cm cada uno. Cliente aporta pintura."
+    },
+    {
+      "id": "paint_touch_up",
+      "name": "Paint Touch-Up",
+      "name_es": "Retoques de Pintura",
+      "emoji": "🖌️",
+      "category": "paint",
+      "badge": null,
+      "price": 149,
+      "full_day": false,
+      "duration": "2 hr",
+      "desc_en": "Fix scuffs, marks, and small wall touch-ups.",
+      "desc_es": "Reparar raspaduras, marcas y retoques de pintura en paredes.",
+      "includes_en": [
+        "Surface prep & clean",
+        "Touch-up application",
+        "Feather blend"
+      ],
+      "includes_es": [
+        "Preparación y limpieza",
+        "Aplicación de retoque",
+        "Degradado"
+      ],
+      "notes_en": "Client provides matching paint. Up to 1 room's worth of touch-ups.",
+      "notes_es": "Cliente aporta pintura. Hasta los retoques de 1 habitación."
+    },
+    {
+      "id": "trim_refresh",
+      "name": "Trim Refresh",
+      "name_es": "Renovación de Molduras",
+      "emoji": "🪞",
+      "category": "paint",
+      "badge": null,
+      "price": 179,
+      "full_day": false,
+      "duration": "2.5 hr",
+      "desc_en": "Paint baseboards or trim in a single room — paint included.",
+      "desc_es": "Pintar rodapiés o molduras en una sola habitación — pintura incluida.",
+      "includes_en": [
+        "Painter's tape & prep",
+        "Baseboard or trim paint (white or matching)",
+        "Clean finish"
+      ],
+      "includes_es": [
+        "Cinta de pintor y preparación",
+        "Pintura de rodapiés/molduras",
+        "Acabado limpio"
+      ],
+      "notes_en": "One room (≤4 walls of trim). Client picks standard white or provides color.",
+      "notes_es": "Una habitación (≤4 paredes de molduras). Cliente elige blanco estándar o aporta color."
+    },
+    {
+      "id": "trim_repair",
+      "name": "Trim Repair",
+      "name_es": "Reparación de Molduras",
+      "emoji": "🪵",
+      "category": "paint",
+      "badge": null,
+      "price": 149,
+      "full_day": false,
+      "duration": "1.5 hr",
+      "desc_en": "Repair or replace small sections of damaged baseboard or casing.",
+      "desc_es": "Reparar o reemplazar secciones dañadas de rodapiés o marcos.",
+      "includes_en": [
+        "Remove damaged section",
+        "Cut & install replacement",
+        "Caulk & prime"
+      ],
+      "includes_es": [
+        "Retirar sección dañada",
+        "Cortar e instalar reemplazo",
+        "Sellado y pintura base"
+      ],
+      "notes_en": "Up to 8 linear feet. Client provides matching paint for final coat.",
+      "notes_es": "Hasta 2.5 metros lineales. Cliente aporta pintura."
+    },
+    {
+      "id": "floor_repair",
+      "name": "Floor Repair & Fix",
+      "name_es": "Reparación de Piso",
+      "emoji": "🔨",
+      "category": "floor",
+      "badge": null,
+      "price": 149,
+      "full_day": false,
+      "duration": "1.5 hr",
+      "desc_en": "Repair loose planks, squeaks, and transition strips.",
+      "desc_es": "Reparar tablas sueltas, chirridos y tiras de transición.",
+      "includes_en": [
+        "Squeak locate & fix",
+        "Re-secure loose planks",
+        "Transition strip re-nail or glue"
+      ],
+      "includes_es": [
+        "Localizar y corregir chirrido",
+        "Reasegurar tablas sueltas",
+        "Reparar tiras de transición"
+      ],
+      "notes_en": "Up to 3 problem spots. Does not include full plank replacement.",
+      "notes_es": "Hasta 3 puntos. No incluye reemplazo completo de tablas."
+    },
+    {
+      "id": "carpet_patch",
+      "name": "Carpet Patch & Stretch",
+      "name_es": "Parche y Tensado de Alfombra",
+      "emoji": "🧵",
+      "category": "floor",
+      "badge": null,
+      "price": 149,
+      "full_day": false,
+      "duration": "1.5 hr",
+      "desc_en": "Re-stretch small loose areas or patch single damage spots.",
+      "desc_es": "Retensado de zonas sueltas o parche de daño puntual.",
+      "includes_en": [
+        "Stretch & re-tack loose area",
+        "Patch damaged spot (matching remnant needed)",
+        "Seam blend"
+      ],
+      "includes_es": [
+        "Retensado",
+        "Parche de zona dañada (requiere retazo similar)",
+        "Unión de bordes"
+      ],
+      "notes_en": "Client must provide matching carpet remnant for patches.",
+      "notes_es": "El cliente debe aportar retazo de alfombra similar."
+    },
+    {
+      "id": "transition_install",
+      "name": "Transition Install",
+      "name_es": "Instalación de Transición",
+      "emoji": "🚪",
+      "category": "floor",
+      "badge": null,
+      "price": 129,
+      "full_day": false,
+      "duration": "1 hr",
+      "desc_en": "Install doorway transitions, thresholds, and T-moldings.",
+      "desc_es": "Instalar transiciones, umbrales y molduras T en puertas.",
+      "includes_en": [
+        "Measure & cut transition",
+        "Secure to subfloor",
+        "Edge finish"
+      ],
+      "includes_es": [
+        "Medir y cortar transición",
+        "Asegurar al subsuelo",
+        "Acabado de borde"
+      ],
+      "notes_en": "Client provides transition strips. Up to 3 doorways.",
+      "notes_es": "Cliente aporta tiras de transición. Hasta 3 vanos."
+    },
+    {
+      "id": "small_area_flooring",
+      "name": "Small Area Flooring",
+      "name_es": "Piso Área Pequeña",
+      "emoji": "🪵",
+      "category": "floor",
+      "badge": null,
+      "price": 299,
+      "full_day": false,
+      "duration": "2.5 hr",
+      "desc_en": "Install laminate or LVP up to 75 sq ft — client provides material.",
+      "desc_es": "Instalar laminado o LVP hasta 75 pies² — el cliente aporta el material.",
+      "includes_en": [
+        "Subfloor prep",
+        "Click-lock or glue install",
+        "Transition trim"
+      ],
+      "includes_es": [
+        "Preparación de subsuelo",
+        "Instalación click o pegado",
+        "Moldura de transición"
+      ],
+      "notes_en": "Client provides flooring material. Max 75 sq ft. Does not include subfloor repair.",
+      "notes_es": "Cliente aporta material. Máx. 75 pies². No incluye reparación de subsuelo."
+    },
+    {
+      "id": "kitchen_appliance_care",
+      "name": "Kitchen Appliance Care",
+      "name_es": "Cuidado de Electrodomésticos",
+      "emoji": "🧊",
+      "category": "kitchen",
+      "badge": null,
+      "price": 149,
+      "full_day": false,
+      "duration": "1.5 hr",
+      "desc_en": "Deep clean of fridge coils/dispenser and dishwasher filter maintenance.",
+      "desc_es": "Limpieza profunda de bobinas de refrigerador y mantenimiento de filtro de lavavajillas.",
+      "includes_en": [
+        "Fridge coil vacuum",
+        "Water dispenser clean",
+        "Dishwasher filter clean & deodorize"
+      ],
+      "includes_es": [
+        "Aspirado de bobinas del refrigerador",
+        "Limpieza del dispensador",
+        "Limpieza y desodorización del filtro del lavavajillas"
+      ],
+      "notes_en": null,
+      "notes_es": null
+    },
+    {
+      "id": "appliance_install",
+      "name": "Appliance Install Basic",
+      "name_es": "Instalación Básica de Electrodoméstico",
+      "emoji": "🍽️",
+      "category": "kitchen",
+      "badge": null,
+      "price": 199,
+      "full_day": false,
+      "duration": "2 hr",
+      "desc_en": "Install dishwasher, microwave, or washer/dryer using existing hookups.",
+      "desc_es": "Instalar lavavajillas, microondas o lavadora/secadora usando conexiones existentes.",
+      "includes_en": [
+        "Remove old unit (if present)",
+        "Install new unit on existing hookups",
+        "Test cycle"
+      ],
+      "includes_es": [
+        "Retirar electrodoméstico viejo (si hay)",
+        "Instalar nuevo en conexiones existentes",
+        "Prueba de ciclo"
+      ],
+      "notes_en": "Existing electrical/water/gas hookups must be in place. Does not include new plumbing or electrical runs.",
+      "notes_es": "Requiere conexiones eléctricas/agua/gas existentes. No incluye nuevas instalaciones."
+    },
+    {
+      "id": "garbage_disposal",
+      "name": "Garbage Disposal Replacement",
+      "name_es": "Reemplazo de Triturador de Basura",
+      "emoji": "🚰",
+      "category": "kitchen",
+      "badge": null,
+      "price": 149,
+      "full_day": false,
+      "duration": "1.5 hr",
+      "desc_en": "Replace existing disposal unit — new unit hardware included.",
+      "desc_es": "Reemplazar triturador existente — hardware de la nueva unidad incluido.",
+      "includes_en": [
+        "Remove old disposal",
+        "Install new unit (standard under-sink)",
+        "Test & check for leaks"
+      ],
+      "includes_es": [
+        "Retirar triturador viejo",
+        "Instalar nueva unidad (estándar bajo fregadero)",
+        "Prueba y revisión de fugas"
+      ],
+      "notes_en": "Standard 1/2 or 3/4 HP unit included. Upgrade models cost extra.",
+      "notes_es": "Incluye unidad estándar de 1/2 o 3/4 HP. Modelos premium tienen costo adicional."
+    },
+    {
+      "id": "furniture_assembly",
+      "name": "Furniture Assembly",
+      "name_es": "Ensamblaje de Muebles",
+      "emoji": "🪑",
+      "category": "furn",
+      "badge": null,
+      "price": 149,
+      "full_day": false,
+      "duration": "2 hr",
+      "desc_en": "Assemble up to 3 furniture items — IKEA, Wayfair, and similar.",
+      "desc_es": "Ensamblar hasta 3 muebles — IKEA, Wayfair y similares.",
+      "includes_en": [
+        "Unbox & organize parts",
+        "Full assembly",
+        "Quality check & stability test"
+      ],
+      "includes_es": [
+        "Desempacar y organizar piezas",
+        "Ensamblaje completo",
+        "Revisión de calidad y estabilidad"
+      ],
+      "notes_en": "Up to 3 standard items. Large wardrobes or complex pieces may require a Half-Day Block.",
+      "notes_es": "Hasta 3 artículos estándar. Armarios grandes pueden requerir Medio Día."
+    },
+    {
+      "id": "wall_mount_install",
+      "name": "Wall Mount & Install",
+      "name_es": "Montaje en Pared",
+      "emoji": "🧱",
+      "category": "furn",
+      "badge": null,
+      "price": 129,
+      "full_day": false,
+      "duration": "1 hr",
+      "desc_en": "Install wall-mounted shelves, TVs, or organization systems.",
+      "desc_es": "Instalar repisas de pared, TVs o sistemas de organización.",
+      "includes_en": [
+        "Stud find & anchor",
+        "Level mount",
+        "Load test"
+      ],
+      "includes_es": [
+        "Localización de viga y anclaje",
+        "Montaje nivelado",
+        "Prueba de carga"
+      ],
+      "notes_en": "Client provides shelves/hardware. Up to 3 items.",
+      "notes_es": "El cliente aporta repisas/hardware. Hasta 3 elementos."
+    },
+    {
+      "id": "exterior_refresh",
+      "name": "Exterior Refresh",
+      "name_es": "Renovación Exterior",
+      "emoji": "🏡",
+      "category": "ext",
+      "badge": null,
+      "price": 299,
+      "full_day": true,
+      "duration": "4 hr",
+      "desc_en": "Gutter cleaning, surface pressure washing, and minor hardware tight-ups.",
+      "desc_es": "Limpieza de canaletas, lavado a presión y apriete de herrajes menores.",
+      "includes_en": [
+        "Gutter clean & flush",
+        "Pressure wash: walkways/driveway",
+        "Exterior hardware tighten-up"
+      ],
+      "includes_es": [
+        "Limpieza y descarga de canaletas",
+        "Lavado a presión: andadores/entrada",
+        "Apriete de herrajes exteriores"
+      ],
+      "notes_en": "Single-story only. Does not include roof work.",
+      "notes_es": "Solo planta baja. No incluye trabajo en techo."
+    },
+    {
+      "id": "fence_patch_up",
+      "name": "Fence Patch-Up",
+      "name_es": "Reparación de Cerca",
+      "emoji": "🪚",
+      "category": "ext",
+      "badge": "POPULAR",
+      "price": 449,
+      "full_day": true,
+      "duration": "4 hr",
+      "desc_en": "Replace broken pickets (up to 10), tighten posts, and fix gate alignment.",
+      "desc_es": "Reemplazar tablas rotas (hasta 10), apretar postes y alinear puerta.",
+      "includes_en": [
+        "Up to 10 cedar pickets (cedar incl.)",
+        "Post tighten & brace",
+        "Gate hinge + latch alignment",
+        "Debris haul-off"
+      ],
+      "includes_es": [
+        "Hasta 10 tablas de cedro (incluidas)",
+        "Apriete y refuerzo de postes",
+        "Alineación de bisagras y pestillo",
+        "Retiro de escombros"
+      ],
+      "notes_en": "Cedar pickets included. Does not cover full fence replacement or concrete post work.",
+      "notes_es": "Tablas de cedro incluidas. No cubre reemplazo completo ni trabajo en postes de concreto."
+    },
+    {
+      "id": "deck_revive",
+      "name": "Deck Revive",
+      "name_es": "Rescate Deck",
+      "emoji": "🪵",
+      "category": "ext",
+      "badge": "BEST VALUE",
+      "price": 599,
+      "full_day": true,
+      "duration": "4 hr",
+      "desc_en": "Small deck repair, pressure wash, sand, and stain — up to 300 sq ft.",
+      "desc_es": "Reparación menor de deck, lavado a presión, lijado y tintado — hasta 300 pies².",
+      "includes_en": [
+        "Replace up to 3 boards",
+        "Pressure wash & clean",
+        "Sand rough spots",
+        "Stain + seal (stain incl.)",
+        "Hardware tighten",
+        "Cleanup & haul-off"
+      ],
+      "includes_es": [
+        "Cambio de hasta 3 tablas",
+        "Lavado a presión",
+        "Lijado de zonas ásperas",
+        "Tinte + sellado (tinte incl.)",
+        "Apriete de herrajes",
+        "Limpieza y retiro"
+      ],
+      "notes_en": "Up to 300 sq ft and 3 board replacements. Stain included (standard solvent-based). Larger decks may need a Half-Day or Full-Day Block add-on.",
+      "notes_es": "Hasta 300 pies² y 3 tablas. Tinte solvente estándar incluido. Decks más grandes pueden requerir bloque adicional."
+    },
+    {
+      "id": "power_wash_boost",
+      "name": "Power Wash Boost",
+      "name_es": "Lavado a Presión",
+      "emoji": "💦",
+      "category": "ext",
+      "badge": null,
+      "price": 149,
+      "full_day": false,
+      "duration": "1.5 hr",
+      "desc_en": "Driveway, walkway, or patio pressure washing.",
+      "desc_es": "Lavado a presión de entrada, andadores o patio.",
+      "includes_en": [
+        "Pressure wash up to 600 sq ft",
+        "Debris clear-off",
+        "Rinse & inspect"
+      ],
+      "includes_es": [
+        "Lavado a presión hasta 560 pies²",
+        "Retiro de escombros",
+        "Enjuague e inspección"
+      ],
+      "notes_en": null,
+      "notes_es": null
+    },
+    {
+      "id": "mailbox_refresh",
+      "name": "Mailbox Refresh",
+      "name_es": "Renovación de Buzón",
+      "emoji": "📬",
+      "category": "ext",
+      "badge": null,
+      "price": 129,
+      "full_day": false,
+      "duration": "1 hr",
+      "desc_en": "Install new mailbox or repair existing post and address numbers.",
+      "desc_es": "Instalar buzón nuevo o reparar poste y números de dirección.",
+      "includes_en": [
+        "Mailbox mount or post re-set",
+        "Address number install",
+        "Level & plumb check"
+      ],
+      "includes_es": [
+        "Montaje o re-instalación de buzón",
+        "Instalación de números",
+        "Verificación de nivel"
+      ],
+      "notes_en": "Client provides new mailbox if replacing. Standard post-mount style only.",
+      "notes_es": "Cliente aporta buzón nuevo si reemplaza. Solo estilo de poste estándar."
+    },
+    {
+      "id": "pet_door_install",
+      "name": "Pet Door Install",
+      "name_es": "Instalación de Puerta para Mascotas",
+      "emoji": "🐕",
+      "category": "org",
+      "badge": null,
+      "price": 199,
+      "full_day": false,
+      "duration": "2 hr",
+      "desc_en": "Install pet door into a standard wood door — up to 12×12\" panel.",
+      "desc_es": "Instalar puerta para mascotas en puerta de madera estándar — hasta 12×12\".",
+      "includes_en": [
+        "Cut door opening",
+        "Install pet door flap",
+        "Seal & finish edges"
+      ],
+      "includes_es": [
+        "Corte de abertura",
+        "Instalación de compuerta",
+        "Sellado y acabado de bordes"
+      ],
+      "notes_en": "Client provides pet door kit. Wood doors only (not steel/fiberglass). Up to 12×12\" opening.",
+      "notes_es": "Cliente aporta el kit. Solo puertas de madera. Abertura hasta 12×12\"."
+    },
+    {
+      "id": "baby_proofing",
+      "name": "Baby Proofing Package",
+      "name_es": "Paquete de Prueba de Bebé",
+      "emoji": "🍼",
+      "category": "org",
+      "badge": null,
+      "price": 179,
+      "full_day": false,
+      "duration": "2 hr",
+      "desc_en": "Secure heavy furniture, install safety locks, and anchor items.",
+      "desc_es": "Asegurar muebles pesados, instalar cerraduras de seguridad y anclar artículos.",
+      "includes_en": [
+        "Furniture tip anchors (up to 6 items)",
+        "Cabinet safety locks (up to 10)",
+        "Outlet covers",
+        "Corner guards"
+      ],
+      "includes_es": [
+        "Anclajes anti-vuelco (hasta 6)",
+        "Cierres de seguridad de gabinetes (hasta 10)",
+        "Cubiertas de tomacorrientes",
+        "Protectores de esquinas"
+      ],
+      "notes_en": "Hardware included.",
+      "notes_es": "Hardware incluido."
+    },
+    {
+      "id": "closet_storage_setup",
+      "name": "Closet Storage Setup",
+      "name_es": "Instalación de Almacenamiento en Closet",
+      "emoji": "👔",
+      "category": "org",
+      "badge": null,
+      "price": 199,
+      "full_day": false,
+      "duration": "2.5 hr",
+      "desc_en": "Install adjustable shelving, rods, and organization systems.",
+      "desc_es": "Instalar repisas ajustables, barras y sistemas de organización.",
+      "includes_en": [
+        "Stud find & mount tracks",
+        "Shelf & rod install",
+        "Level & load test"
+      ],
+      "includes_es": [
+        "Localización de vigas y montaje de rieles",
+        "Instalación de repisas y barras",
+        "Nivelación y prueba de carga"
+      ],
+      "notes_en": "Client provides shelving system (ClosetMaid, Elfa, etc.). One closet.",
+      "notes_es": "Cliente aporta el sistema (ClosetMaid, Elfa, etc.). Un closet."
+    },
+    {
+      "id": "cabinet_hardware",
+      "name": "Cabinet Hardware Refresh",
+      "name_es": "Renovación de Herrajes de Gabinetes",
+      "emoji": "🪛",
+      "category": "org",
+      "badge": null,
+      "price": 129,
+      "full_day": false,
+      "duration": "1.5 hr",
+      "desc_en": "Replace cabinet knobs, pulls, and hinges.",
+      "desc_es": "Reemplazar perillas, jaladera y bisagras de gabinetes.",
+      "includes_en": [
+        "Remove old hardware",
+        "Install new knobs/pulls/hinges",
+        "Template for consistent placement"
+      ],
+      "includes_es": [
+        "Retirar herrajes viejos",
+        "Instalar nuevas perillas/jaladores/bisagras",
+        "Plantilla para colocación uniforme"
+      ],
+      "notes_en": "Client provides new hardware. Up to 20 cabinet doors.",
+      "notes_es": "El cliente aporta los nuevos herrajes. Hasta 20 puertas de gabinete."
+    },
+    {
+      "id": "homeowner_starter_bundle",
+      "name": "Homeowner Starter Bundle",
+      "name_es": "Paquete Inicio Propietario",
+      "emoji": "🏡",
+      "category": "bundles",
+      "badge": "BUNDLE · SAVE",
+      "price": 299,
+      "full_day": false,
+      "duration": "3 hr",
+      "desc_en": "Spring Home Refresh + Kitchen Appliance Care + Home Safety Check in one visit.",
+      "desc_es": "Refresco de Primavera + Cuidado de Electrodomésticos + Revisión de Seguridad en una visita.",
+      "includes_en": [
+        "Spring Home Refresh (filters, AC, detectors)",
+        "Kitchen Appliance Care (fridge + dishwasher)",
+        "Home Safety Check"
+      ],
+      "includes_es": [
+        "Refresco de Primavera",
+        "Cuidado de Electrodomésticos",
+        "Revisión de Seguridad"
+      ],
+      "notes_en": "Best for new homeowners or the annual home checkup.",
+      "notes_es": "Ideal para nuevos propietarios o revisión anual del hogar."
+    },
+    {
+      "id": "exterior_refresh_bundle",
+      "name": "Exterior Refresh Bundle",
+      "name_es": "Paquete Renovación Exterior",
+      "emoji": "🌿",
+      "category": "bundles",
+      "badge": "BUNDLE · SAVE",
+      "price": 379,
+      "full_day": true,
+      "duration": "4 hr",
+      "desc_en": "Exterior Refresh + Power Wash Boost — gutters, walkways, and surfaces in one trip.",
+      "desc_es": "Renovación Exterior + Lavado a Presión — canaletas, andadores y superficies en una visita.",
+      "includes_en": [
+        "Exterior Refresh (gutters + surfaces + hardware)",
+        "Power Wash Boost (driveway/walkway/patio)"
+      ],
+      "includes_es": [
+        "Renovación Exterior",
+        "Lavado a Presión"
+      ],
+      "notes_en": null,
+      "notes_es": null
+    },
+    {
+      "id": "curb_appeal_bundle",
+      "name": "Curb Appeal Bundle",
+      "name_es": "Paquete Apariencia Exterior",
+      "emoji": "✨",
+      "category": "bundles",
+      "badge": "BUNDLE · SAVE",
+      "price": 379,
+      "full_day": true,
+      "duration": "4 hr",
+      "desc_en": "Exterior Refresh + Headlight Restoration — home and driveway both looking sharp.",
+      "desc_es": "Renovación Exterior + Restauración de Faros — casa y entrada con excelente apariencia.",
+      "includes_en": [
+        "Exterior Refresh",
+        "Headlight restoration (1 vehicle)"
+      ],
+      "includes_es": [
+        "Renovación Exterior",
+        "Restauración de faros (1 vehículo)"
+      ],
+      "notes_en": null,
+      "notes_es": null
+    },
+    {
+      "id": "quick_fix_block",
+      "name": "Quick Fix Block",
+      "name_es": "Bloque Arreglo Rápido",
+      "emoji": "⚡",
+      "category": "hourly",
+      "badge": null,
+      "price": 179,
+      "full_day": false,
+      "duration": "2 hr",
+      "desc_en": "2-hour block for small tasks and miscellaneous repairs — about 3 small tasks.",
+      "desc_es": "Bloque de 2 horas para tareas pequeñas y reparaciones varias — unas 3 tareas.",
+      "includes_en": [
+        "2 hrs hands-on labor",
+        "Standard tools & hardware"
+      ],
+      "includes_es": [
+        "2 hrs de trabajo",
+        "Herramientas estándar"
+      ],
+      "notes_en": "Client provides a task list before booking. Materials for specialized tasks extra.",
+      "notes_es": "El cliente envía lista de tareas antes de reservar. Materiales especiales son extra."
+    },
+    {
+      "id": "half_day_block",
+      "name": "Half Day Block",
+      "name_es": "Medio Día",
+      "emoji": "🕓",
+      "category": "hourly",
+      "badge": "MOST BOOKED",
+      "price": 279,
+      "full_day": false,
+      "duration": "4 hr",
+      "desc_en": "4-hour block — best value for medium projects or a longer to-do list.",
+      "desc_es": "Bloque de 4 horas — mejor valor para proyectos medianos o lista más larga.",
+      "includes_en": [
+        "4 hrs hands-on labor",
+        "Standard tools & hardware"
+      ],
+      "includes_es": [
+        "4 hrs de trabajo",
+        "Herramientas estándar"
+      ],
+      "notes_en": "Client provides a task list before booking.",
+      "notes_es": "El cliente envía lista de tareas antes de reservar."
+    },
+    {
+      "id": "full_day_block",
+      "name": "Full Day Block",
+      "name_es": "Día Completo",
+      "emoji": "🌅",
+      "category": "hourly",
+      "badge": null,
+      "price": 499,
+      "full_day": true,
+      "duration": "8 hr",
+      "desc_en": "8-hour block for major projects or a full spring-cleaning list.",
+      "desc_es": "Bloque de 8 horas para proyectos grandes o lista completa de limpieza de primavera.",
+      "includes_en": [
+        "8 hrs hands-on labor",
+        "Standard tools & hardware"
+      ],
+      "includes_es": [
+        "8 hrs de trabajo",
+        "Herramientas estándar"
+      ],
+      "notes_en": "Client provides a task list before booking.",
+      "notes_es": "El cliente envía lista de tareas antes de reservar."
+    }
+  ],
+  "add_ons": [
+    {
+      "id": "addon_headlight",
+      "name": "Headlight Restoration",
+      "price": 120,
+      "unit": "per vehicle",
+      "desc_en": "Restore, sand, polish, UV seal headlights while crew is on site."
+    },
+    {
+      "id": "addon_fixture_swap",
+      "name": "Extra Fixture Swap",
+      "price": 89,
+      "unit": "each",
+      "desc_en": "Additional fixture swap beyond initial quote."
+    },
+    {
+      "id": "addon_power_wash",
+      "name": "Extra Power Wash Area",
+      "price": 99,
+      "unit": "each",
+      "desc_en": "Additional pressure wash area."
+    },
+    {
+      "id": "addon_caulking",
+      "name": "Extra Caulking Repair",
+      "price": 79,
+      "unit": "each",
+      "desc_en": "Additional small caulk repair."
+    }
+  ]
+}

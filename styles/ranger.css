@@ -198,6 +198,70 @@
   margin-top: 4px;
 }
 
+/* Price breakdown (base + add-ons + total) */
+.rg-card-breakdown {
+  margin-bottom: 8px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  overflow: hidden;
+  font-size: 13px;
+}
+.rg-card-breakdown-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+  border-bottom: 1px solid #f0f4f8;
+  color: var(--ink-soft);
+}
+.rg-card-addon {
+  color: var(--ink-soft);
+  font-style: italic;
+}
+.rg-card-breakdown-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 7px 10px;
+  background: #f7f9fc;
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--navy, #0d2136);
+}
+.rg-card-breakdown-total small.rg-card-dur {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--ink-soft);
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  margin-left: 5px;
+}
+
+/* Jobber handoff recap card */
+.rg-jobber-recap {
+  background: #fff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin: 4px 0 6px;
+  font-size: 13px;
+  max-width: 340px;
+}
+.rg-jobber-recap-label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--ink);
+}
+.rg-jobber-recap-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 3px 0;
+  border-bottom: 1px solid #f0f4f8;
+  color: var(--ink-soft);
+}
+.rg-jobber-recap-row:last-child { border: none; }
+.rg-jobber-recap-row b { color: var(--ink); }
+
 /* Jobber iframe embed */
 .rg-jobber-wrap {
   width: 100%;

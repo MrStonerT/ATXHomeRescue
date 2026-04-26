@@ -143,7 +143,7 @@
   function SummaryStore() {
     this._state = {
       service_name: null, package_id: null, package_name: null,
-      package_price: null, package_data: null, zip: null, photos: 0,
+      package_price: null, package_data: null, add_ons: [], zip: null, photos: 0,
       answers: {}, contact_name: null, contact_phone: null,
       contact_email: null, preferred_windows: [], notes: null,
     };
@@ -164,8 +164,11 @@
     this.update({
       package_id:    pkg.id,
       package_name:  pkg.name,
-      package_price: pkg.price_fmt || ('$' + pkg.price),
+      // Use total_fmt (base + add-ons) as the headline price so the panel
+      // always shows what the customer will actually pay.
+      package_price: pkg.total_fmt || pkg.price_fmt || ('$' + pkg.price),
       package_data:  pkg,
+      add_ons:       pkg.add_ons || [],
     });
   };
   SummaryStore.prototype.on = function (fn) {
@@ -178,7 +181,7 @@
   SummaryStore.prototype.reset = function () {
     this._state = {
       service_name: null, package_id: null, package_name: null,
-      package_price: null, package_data: null, zip: null, photos: 0,
+      package_price: null, package_data: null, add_ons: [], zip: null, photos: 0,
       answers: {}, contact_name: null, contact_phone: null,
       contact_email: null, preferred_windows: [], notes: null,
     };
