@@ -15,17 +15,35 @@
 
   /* ---------- Bootstrap ---------- */
 
+  // Visual + duration metadata for add-ons booked standalone (catalog.add_ons
+  // entries don't carry emoji/duration since they normally piggyback on a
+  // base package).
+  var ADDON_META = {
+    addon_headlight:    { emoji: '🚗', duration: '1 hr'   },
+    addon_fixture_swap: { emoji: '💡', duration: '45 min' },
+    addon_power_wash:   { emoji: '💦', duration: '1 hr'   },
+    addon_caulking:     { emoji: '🛁', duration: '45 min' },
+  };
+
   document.addEventListener('DOMContentLoaded', function () {
     var params    = new URLSearchParams(location.search);
     var packageId = params.get('package');
+    var addonId   = params.get('addon');
 
-    if (!packageId) { showError('No package specified.'); return; }
+    if (!packageId && !addonId) { showError('No package specified.'); return; }
 
     fetch('scripts/services-catalog.json')
       .then(function (r) { return r.json(); })
       .then(function (data) {
         catalog = data;
-        pkg = data.packages.find(function (p) { return p.id === packageId; });
+
+        if (packageId) {
+          pkg = data.packages.find(function (p) { return p.id === packageId; });
+        } else if (addonId) {
+          var addon = (data.add_ons || []).find(function (a) { return a.id === addonId; });
+          if (addon) pkg = synthesizePkgFromAddon(addon);
+        }
+
         if (!pkg) { showError(t('req.pkgNotFound'), t('req.pkgNotFoundSub')); return; }
         renderPackage();
         renderAddOns();
@@ -36,6 +54,29 @@
       })
       .catch(function () { showError('Could not load catalog. Please try again.'); });
   });
+
+  // Build a package-shaped object from an add-on so the rest of the form
+  // (renderPackage, totals, Jobber notes, recap) can run unchanged.
+  function synthesizePkgFromAddon(addon) {
+    var meta = ADDON_META[addon.id] || { emoji: '➕', duration: '1 hr' };
+    return {
+      id:          addon.id,
+      name:        addon.name,
+      name_es:     addon.name_es || addon.name,
+      emoji:       meta.emoji,
+      price:       addon.price,
+      duration:    meta.duration,
+      full_day:    false,
+      desc_en:     addon.desc_en,
+      desc_es:     addon.desc_es || addon.desc_en,
+      badge:       null,
+      includes_en: [],
+      includes_es: [],
+      notes_en:    null,
+      notes_es:    null,
+      is_addon_only: true
+    };
+  }
 
   function showError(msg, sub) {
     document.getElementById('reqLoading').style.display = 'none';
@@ -79,6 +120,11 @@
     var maxNote = document.getElementById('reqAddonMaxNote');
 
     if (!catalog.add_ons || catalog.add_ons.length === 0) {
+      addOnsSection.style.display = 'none'; return;
+    }
+
+    // Standalone add-on bookings can't take further add-ons.
+    if (pkg.is_addon_only) {
       addOnsSection.style.display = 'none'; return;
     }
 
