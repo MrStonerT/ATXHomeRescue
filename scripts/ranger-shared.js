@@ -242,6 +242,7 @@
     getOrCreateConversationId: getOrCreateConversationId,
     getDeepLinkAsk:            getDeepLinkAsk,
     shouldAutoOpenWidget:      shouldAutoOpenWidget,
+    getTurnstileToken:         getTurnstileToken,
     WORKER_BASE:               WORKER_BASE,
   };
 })();
