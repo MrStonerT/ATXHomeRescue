@@ -45,17 +45,19 @@
       </div>
     </a>
     <nav class="nav-links">
-      <a href="index.html#packages">Packages</a>
-      <a href="packages.html">All packages</a>
-      <a href="pros.html">Our Pros</a>
-      <a href="index.html#how">How it works</a>
-      <a href="index.html#faq">FAQ</a>
+      <a href="index.html#packages" data-i18n="pros.nav.packages">Packages</a>
+      <a href="packages.html" data-i18n="pros.nav.allpkg">All packages</a>
+      <a href="pros.html" data-i18n="pros.nav.pros">Our Pros</a>
+      <a href="index.html#how" data-i18n="pros.nav.how">How it works</a>
+      <a href="index.html#faq" data-i18n="pros.nav.faq">FAQ</a>
     </nav>
-    <a href="booking.html" class="btn">Start with Ranger →</a>
+    <button class="lang-toggle" id="langToggle" aria-label="Language"><span class="lang-flag">EN</span> / <span class="lang-flag off">ES</span></button>
+    <a href="booking.html" class="btn" data-i18n="pros.nav.cta">Start with Ranger →</a>
   </div>
 </header>
 
 <main class="legal">
+  <div class="legal-es-notice note" style="display:none;background:#fff;border-left:3px solid var(--orange);padding:14px 18px;margin:0 0 24px;font-size:14px" data-i18n="legal.es.notice">Esta página está disponible solo en inglés. La versión en inglés es la versión legalmente vinculante.</div>
   <div class="eyebrow">Legal</div>
   <h1>Terms of Service</h1>
   <div class="meta">Effective date: April 24, 2026 · Last updated: April 24, 2026</div>
@@ -163,7 +165,7 @@
     <div class="foot-grid">
       <div class="foot-brand">
         <img src="assets/logo.png" alt="ATX Home Rescue"/>
-        <p>Flat-priced handyman &amp; home-care for Northwest Austin. Repair. Remodel. Reclaim your weekends.</p>
+        <p data-i18n="pros.foot.lede">Flat-priced handyman &amp; home-care for Northwest Austin. Repair. Remodel. Reclaim your weekends.</p>
         <div class="foot-contact">
           📞 <a href="tel:+17373789595">(737) 378-9595</a><br/>
           ✉ <a href="mailto:sales@atxhomerescue.com">sales@atxhomerescue.com</a><br/>
@@ -171,42 +173,46 @@
         </div>
       </div>
       <div>
-        <h5>Packages</h5>
+        <h5 data-i18n="pros.nav.packages">Packages</h5>
         <a href="index.html#packages">Featured</a>
-        <a href="packages.html">All packages</a>
+        <a href="packages.html" data-i18n="pros.nav.allpkg">All packages</a>
         <a href="packages.html?cat=bundles">Bundles</a>
         <a href="packages.html?cat=hourly">Hourly blocks</a>
         <a href="packages.html?cat=addon">Add-ons</a>
       </div>
       <div>
         <h5>Company</h5>
-        <a href="index.html#how">How it works</a>
+        <a href="pros.html" data-i18n="pros.nav.pros">Our Pros</a>
+        <a href="pros.html#apply" data-i18n="pros.foot.apply">Apply to roster</a>
+        <a href="index.html#how" data-i18n="pros.nav.how">How it works</a>
         <a href="index.html#gallery">Recent work</a>
         <a href="index.html#reviews">Reviews</a>
-        <a href="index.html#faq">FAQ</a>
+        <a href="index.html#faq" data-i18n="pros.nav.faq">FAQ</a>
         <a href="booking.html">Contact</a>
       </div>
       <div>
-        <h5>Service area</h5>
+        <h5 data-i18n="pros.foot.h.area">Service area</h5>
         <div class="mono" style="font-size:12px;line-height:2;color:#cfd9e3">
           78726 · 78727 · 78729<br/>
           78730 · 78731 · 78750 · 78759<br/>
         </div>
-        <div style="margin-top:14px;color:#cfd9e3;line-height:1.6">
+        <div style="margin-top:14px;color:#cfd9e3;line-height:1.6" data-i18n-html="pros.foot.area.neighbor">
           Anderson Mill · Jester · Great Hills ·<br/>
           Balcones · Spicewood · Steiner Ranch (soon)
         </div>
       </div>
     </div>
     <div class="foot-bottom">
-      <div>© 2026 ATX Home Rescue. All rights reserved.</div>
+      <div data-i18n="pros.foot.copy">© 2026 ATX Home Rescue. All rights reserved.</div>
       <div style="display:flex;gap:18px">
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
+        <a href="privacy.html" data-i18n="pros.foot.privacy">Privacy</a>
+        <a href="terms.html" data-i18n="pros.foot.terms">Terms</a>
       </div>
     </div>
   </div>
 </footer>
 
+<script src="scripts/i18n.js"></script>
+<script src="scripts/legal-and-404.js"></script>
 </body>
 </html>

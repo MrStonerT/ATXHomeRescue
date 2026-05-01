@@ -100,14 +100,8 @@ function handleDeepLink() {
 }
 
 /* ---- Language toggle (shared with homepage) ---- */
-const langBtn = document.getElementById('langToggle');
-if (langBtn) {
-  langBtn.addEventListener('click', () => {
-    setLang(lang === 'en' ? 'es' : 'en');
-    langBtn.innerHTML = `<span class="lang-flag ${lang === 'en' ? '' : 'off'}">EN</span> / <span class="lang-flag ${lang === 'es' ? '' : 'off'}">ES</span>`;
-  });
-  langBtn.innerHTML = `<span class="lang-flag ${lang === 'en' ? '' : 'off'}">EN</span> / <span class="lang-flag ${lang === 'es' ? '' : 'off'}">ES</span>`;
-}
+applyI18n();
+bindLangToggle(applyI18n);
 
 /* ---- Float button ---- */
 const floatBtn = document.querySelector('.float-agent');

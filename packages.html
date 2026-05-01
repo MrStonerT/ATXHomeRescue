@@ -42,24 +42,24 @@
     </a>
     <nav class="nav-links">
       <a href="index.html#packages">Featured</a>
-      <a href="packages.html" class="on">All packages</a>
-      <a href="pros.html">Our Pros</a>
-      <a href="index.html#how">How it works</a>
+      <a href="packages.html" class="on" data-i18n="pros.nav.allpkg">All packages</a>
+      <a href="pros.html" data-i18n="pros.nav.pros">Our Pros</a>
+      <a href="index.html#how" data-i18n="pros.nav.how">How it works</a>
       <a href="index.html#gallery">Work</a>
       <a href="index.html#reviews">Reviews</a>
-      <a href="index.html#faq">FAQ</a>
+      <a href="index.html#faq" data-i18n="pros.nav.faq">FAQ</a>
     </nav>
     <button class="lang-toggle" id="langToggle" aria-label="Language"><span class="lang-flag">EN</span> / <span class="lang-flag off">ES</span></button>
-    <a href="booking.html" class="btn">Start with Ranger →</a>
+    <a href="booking.html" class="btn" data-i18n="pros.nav.cta">Start with Ranger →</a>
   </div>
 </header>
 
 <!-- PAGE HERO -->
 <section class="cat-hero">
   <div class="container">
-    <div class="eyebrow" style="color:var(--orange)"><span style="background:var(--orange)"></span>The full menu</div>
-    <h1 class="slab">Every rescue, <span class="hi">one place.</span></h1>
-    <p class="lede">40+ flat-priced packages, 3 hourly blocks, value bundles, and add-ons. Filter, search, or scroll. Every price includes labor; materials included unless noted.</p>
+    <div class="eyebrow" style="color:var(--orange)"><span style="background:var(--orange)"></span><span data-i18n="cat.eyebrow">The full menu</span></div>
+    <h1 class="slab" data-i18n-html="cat.h">Every rescue, <span class="hi">one place.</span></h1>
+    <p class="lede" data-i18n="cat.lede">40+ flat-priced packages, 3 hourly blocks, value bundles, and add-ons. Filter, search, or scroll. Every price includes labor; materials included unless noted.</p>
   </div>
 </section>
 
@@ -68,62 +68,62 @@
   <div class="container cat-bar-inner">
     <div class="cat-search">
       <span class="search-ico">🔍</span>
-      <input id="catSearch" type="search" placeholder="Search packages — e.g. 'fan', 'caulk', 'paint'…" aria-label="Search packages"/>
+      <input id="catSearch" type="search" data-i18n-attr="placeholder:cat.search.ph;aria-label:cat.search.ph" placeholder="Search packages — e.g. 'fan', 'caulk', 'paint'…" aria-label="Search packages"/>
     </div>
     <div class="cat-chips" id="catChips">
-      <button class="chip on" data-cat="all">All <span class="chip-count" id="count-all"></span></button>
-      <button class="chip" data-cat="bundles">🎁 Bundles</button>
-      <button class="chip" data-cat="install">🔧 Installation</button>
-      <button class="chip" data-cat="maint">🛡️ Maintenance</button>
-      <button class="chip" data-cat="paint">🎨 Paint &amp; Drywall</button>
-      <button class="chip" data-cat="floor">🪜 Flooring</button>
-      <button class="chip" data-cat="kitchen">🍳 Kitchen</button>
-      <button class="chip" data-cat="furn">🛋 Furniture</button>
-      <button class="chip" data-cat="ext">🪵 Exterior</button>
+      <button class="chip on" data-cat="all"><span data-i18n="cat.chip.all">All</span> <span class="chip-count" id="count-all"></span></button>
+      <button class="chip" data-cat="bundles" data-i18n="cat.chip.bundles">🎁 Bundles</button>
+      <button class="chip" data-cat="install" data-i18n="cat.chip.install">🔧 Installation</button>
+      <button class="chip" data-cat="maint" data-i18n="cat.chip.maint">🛡️ Maintenance</button>
+      <button class="chip" data-cat="paint" data-i18n="cat.chip.paint">🎨 Paint &amp; Drywall</button>
+      <button class="chip" data-cat="floor" data-i18n="cat.chip.floor">🪜 Flooring</button>
+      <button class="chip" data-cat="kitchen" data-i18n="cat.chip.kitchen">🍳 Kitchen</button>
+      <button class="chip" data-cat="furn" data-i18n="cat.chip.furn">🛋 Furniture</button>
+      <button class="chip" data-cat="ext" data-i18n="cat.chip.exterior">🪵 Exterior</button>
       <button class="chip" data-cat="org">📦 Organization</button>
-      <button class="chip" data-cat="hourly">⏱️ Hourly blocks</button>
-      <button class="chip" data-cat="addon">➕ Add-ons</button>
+      <button class="chip" data-cat="hourly" data-i18n="cat.chip.hourly">⏱️ Hourly blocks</button>
+      <button class="chip" data-cat="addon" data-i18n="cat.chip.addon">➕ Add-ons</button>
     </div>
   </div>
 </div>
 
 <main class="container cat-main">
 
-  <p class="cat-empty" id="catEmpty" hidden>No packages match that search. Try a different term — or <a href="booking.html">ask Ranger to quote it.</a></p>
+  <p class="cat-empty" id="catEmpty" hidden><span data-i18n="cat.empty">No packages match that search. Try a different term — or</span> <a href="booking.html" data-i18n="cat.empty.cta">ask Ranger to quote it.</a></p>
 
   <!-- BUNDLES (featured at top) -->
   <section class="cat-section" data-cat="bundles">
     <div class="cat-h">
-      <h2>🎁 Bundles <span class="cat-tally"></span></h2>
-      <p>Stack a few rescues into one trip and save versus booking them individually.</p>
+      <h2><span data-i18n="cat.sec.bundles.h">🎁 Bundles</span> <span class="cat-tally"></span></h2>
+      <p data-i18n="cat.sec.bundles.p">Stack a few rescues into one trip and save versus booking them individually.</p>
     </div>
     <div class="cat-grid">
 
       <article class="cat-card pop" data-name="Homeowner Starter Bundle" data-cat="bundles">
-        <span class="cat-badge">BUNDLE · SAVE</span>
+        <span class="cat-badge" data-i18n="cat.badge.bundle">BUNDLE · SAVE</span>
         <div class="cat-emoji">🏡</div>
-        <h3>Homeowner Starter Bundle</h3>
-        <p class="desc">Spring Home Refresh + Kitchen Appliance Care + Home Safety Check, knocked out in one visit.</p>
+        <h3 data-i18n="cat.starter.h">Homeowner Starter Bundle</h3>
+        <p class="desc" data-i18n="cat.starter.d">Spring Home Refresh + Kitchen Appliance Care + Home Safety Check, knocked out in one visit.</p>
         <div class="meta"><span class="price">$299</span><span class="dur">3 HRS</span></div>
-        <a href="request.html?package=homeowner_starter_bundle" class="btn wide">Book this →</a>
+        <a href="request.html?package=homeowner_starter_bundle" class="btn wide" data-i18n="cat.book">Book this →</a>
       </article>
 
       <article class="cat-card pop" data-name="Exterior Refresh Bundle" data-cat="bundles">
-        <span class="cat-badge">BUNDLE · SAVE</span>
+        <span class="cat-badge" data-i18n="cat.badge.bundle">BUNDLE · SAVE</span>
         <div class="cat-emoji">🌿</div>
-        <h3>Exterior Refresh Bundle</h3>
-        <p class="desc">Exterior Refresh + Power Wash Boost — gutters, walkways, and exterior surfaces in one trip.</p>
+        <h3 data-i18n="cat.ext_bundle.h">Exterior Refresh Bundle</h3>
+        <p class="desc" data-i18n="cat.ext_bundle.d">Exterior Refresh + Power Wash Boost — gutters, walkways, and exterior surfaces in one trip.</p>
         <div class="meta"><span class="price">$379</span><span class="dur">4 HRS</span></div>
-        <a href="request.html?package=exterior_refresh_bundle" class="btn wide">Book this →</a>
+        <a href="request.html?package=exterior_refresh_bundle" class="btn wide" data-i18n="cat.book">Book this →</a>
       </article>
 
       <article class="cat-card pop" data-name="Curb Appeal Bundle" data-cat="bundles">
-        <span class="cat-badge">BUNDLE · SAVE</span>
+        <span class="cat-badge" data-i18n="cat.badge.bundle">BUNDLE · SAVE</span>
         <div class="cat-emoji">✨</div>
-        <h3>Curb Appeal Bundle</h3>
-        <p class="desc">Exterior Refresh + Headlight Restoration — your home and your driveway both pop.</p>
+        <h3 data-i18n="cat.curb.h">Curb Appeal Bundle</h3>
+        <p class="desc" data-i18n="cat.curb.d">Exterior Refresh + Headlight Restoration — your home and your driveway both pop.</p>
         <div class="meta"><span class="price">$379</span><span class="dur">4 HRS</span></div>
-        <a href="request.html?package=curb_appeal_bundle" class="btn wide">Book this →</a>
+        <a href="request.html?package=curb_appeal_bundle" class="btn wide" data-i18n="cat.book">Book this →</a>
       </article>
 
     </div>
@@ -132,75 +132,75 @@
   <!-- INSTALLATION & MOUNTING -->
   <section class="cat-section" data-cat="install">
     <div class="cat-h">
-      <h2>🔧 Installation &amp; Mounting <span class="cat-tally"></span></h2>
-      <p>Hanging, mounting, swapping fixtures, hardware refreshes, doors.</p>
+      <h2><span data-i18n="cat.sec.install.h">🔧 Installation &amp; Mounting</span> <span class="cat-tally"></span></h2>
+      <p data-i18n="cat.sec.install.p">Hanging, mounting, swapping fixtures, hardware refreshes, doors.</p>
     </div>
     <div class="cat-grid">
 
       <article class="cat-card" data-name="TV Mount Pro" data-cat="install">
-        <span class="cat-badge">POPULAR</span>
+        <span class="cat-badge" data-i18n="cat.badge.popular">POPULAR</span>
         <div class="cat-emoji">📺</div>
-        <h3>TV Mount Pro</h3>
-        <p class="desc">Professional mount for TVs up to 75". Clean cable management and full setup. (Excludes mounting to concrete/brick.)</p>
+        <h3 data-i18n="cat.tv.h">TV Mount Pro</h3>
+        <p class="desc" data-i18n="cat.tv.d">Professional mount for TVs up to 75". Clean cable management and full setup. (Excludes mounting to concrete/brick.)</p>
         <div class="meta"><span class="price">$149</span><span class="dur">1 HR</span></div>
-        <a href="request.html?package=tv_mount_pro" class="btn wide">Book this →</a>
+        <a href="request.html?package=tv_mount_pro" class="btn wide" data-i18n="cat.book">Book this →</a>
       </article>
 
       <article class="cat-card" data-name="Gallery Wall" data-cat="install">
         <div class="cat-emoji">🎨</div>
-        <h3>Gallery Wall</h3>
-        <p class="desc">Up to 8 items. Level installation with proper anchors for heavy or mixed items.</p>
+        <h3 data-i18n="cat.gallery.h">Gallery Wall</h3>
+        <p class="desc" data-i18n="cat.gallery.d">Up to 8 items. Level installation with proper anchors for heavy or mixed items.</p>
         <div class="meta"><span class="price">$199</span><span class="dur">1.5 HRS</span></div>
-        <a href="request.html?package=gallery_wall" class="btn wide">Book this →</a>
+        <a href="request.html?package=gallery_wall" class="btn wide" data-i18n="cat.book">Book this →</a>
       </article>
 
       <article class="cat-card" data-name="Move-In Rescue" data-cat="install">
-        <span class="cat-badge">POPULAR</span>
+        <span class="cat-badge" data-i18n="cat.badge.popular">POPULAR</span>
         <div class="cat-emoji">🛋</div>
-        <h3>Move-In Rescue</h3>
-        <p class="desc">Multi-tasker special: shelving, rod installation, art hanging, and minor touch-ups.</p>
+        <h3 data-i18n="cat.movein.h">Move-In Rescue</h3>
+        <p class="desc" data-i18n="cat.movein.d">Multi-tasker special: shelving, rod installation, art hanging, and minor touch-ups.</p>
         <div class="meta"><span class="price">$389</span><span class="dur">3 HRS</span></div>
-        <a href="request.html?package=move_in_rescue" class="btn wide">Book this →</a>
+        <a href="request.html?package=move_in_rescue" class="btn wide" data-i18n="cat.book">Book this →</a>
       </article>
 
       <article class="cat-card" data-name="Fixture Swap" data-cat="install">
         <div class="cat-emoji">💡</div>
-        <h3>Fixture Swap</h3>
-        <p class="desc">Replace existing light fixture or outlet using current wiring.</p>
+        <h3 data-i18n="cat.fix_swap.h">Fixture Swap</h3>
+        <p class="desc" data-i18n="cat.fix_swap.d">Replace existing light fixture or outlet using current wiring.</p>
         <div class="meta"><span class="price">$129</span><span class="dur">1 HR</span></div>
-        <a href="request.html?package=fixture_swap" class="btn wide">Book this →</a>
+        <a href="request.html?package=fixture_swap" class="btn wide" data-i18n="cat.book">Book this →</a>
       </article>
 
       <article class="cat-card" data-name="Ceiling Fan Replacement" data-cat="install">
         <div class="cat-emoji">🌀</div>
-        <h3>Ceiling Fan Replacement</h3>
-        <p class="desc">Replace existing fan unit using same wiring and ceiling mount.</p>
+        <h3 data-i18n="cat.fan_repl.h">Ceiling Fan Replacement</h3>
+        <p class="desc" data-i18n="cat.fan_repl.d">Replace existing fan unit using same wiring and ceiling mount.</p>
         <div class="meta"><span class="price">$149</span><span class="dur">1.5 HRS</span></div>
-        <a href="request.html?package=ceiling_fan_replacement" class="btn wide">Book this →</a>
+        <a href="request.html?package=ceiling_fan_replacement" class="btn wide" data-i18n="cat.book">Book this →</a>
       </article>
 
       <article class="cat-card" data-name="Blind &amp; Curtain Install" data-cat="install">
         <div class="cat-emoji">🪟</div>
-        <h3>Blind &amp; Curtain Install</h3>
-        <p class="desc">Install blinds, shades, or curtain rods (hardware/brackets included).</p>
+        <h3 data-i18n="cat.blind.h">Blind &amp; Curtain Install</h3>
+        <p class="desc" data-i18n="cat.blind.d">Install blinds, shades, or curtain rods (hardware/brackets included).</p>
         <div class="meta"><span class="price">$129</span><span class="dur">1 HR</span></div>
-        <a href="request.html?package=blind_curtain_install" class="btn wide">Book this →</a>
+        <a href="request.html?package=blind_curtain_install" class="btn wide" data-i18n="cat.book">Book this →</a>
       </article>
 
       <article class="cat-card" data-name="Door Hardware Refresh" data-cat="install">
         <div class="cat-emoji">🚪</div>
-        <h3>Door Hardware Refresh</h3>
-        <p class="desc">Replace handles, deadbolts, and hinges.</p>
+        <h3 data-i18n="cat.door_hw.h">Door Hardware Refresh</h3>
+        <p class="desc" data-i18n="cat.door_hw.d">Replace handles, deadbolts, and hinges.</p>
         <div class="meta"><span class="price">$119</span><span class="dur">1 HR</span></div>
-        <a href="request.html?package=door_hardware_refresh" class="btn wide">Book this →</a>
+        <a href="request.html?package=door_hardware_refresh" class="btn wide" data-i18n="cat.book">Book this →</a>
       </article>
 
       <article class="cat-card" data-name="Door Adjustment Package" data-cat="install">
         <div class="cat-emoji">🚪</div>
-        <h3>Door Adjustment Package</h3>
-        <p class="desc">Fix sticking doors, track alignment, and hinge tightening.</p>
+        <h3 data-i18n="cat.door_adj.h">Door Adjustment Package</h3>
+        <p class="desc" data-i18n="cat.door_adj.d">Fix sticking doors, track alignment, and hinge tightening.</p>
         <div class="meta"><span class="price">$119</span><span class="dur">1 HR</span></div>
-        <a href="request.html?package=door_adjustment" class="btn wide">Book this →</a>
+        <a href="request.html?package=door_adjustment" class="btn wide" data-i18n="cat.book">Book this →</a>
       </article>
 
     </div>
@@ -209,66 +209,66 @@
   <!-- MAINTENANCE & SAFETY -->
   <section class="cat-section" data-cat="maint">
     <div class="cat-h">
-      <h2>🛡️ Maintenance &amp; Safety <span class="cat-tally"></span></h2>
-      <p>Seasonal upkeep, safety checks, and the small stuff that keeps things running.</p>
+      <h2><span data-i18n="cat.sec.maint.h">🛡️ Maintenance &amp; Safety</span> <span class="cat-tally"></span></h2>
+      <p data-i18n="cat.sec.maint.p">Seasonal upkeep, safety checks, and the small stuff that keeps things running.</p>
     </div>
     <div class="cat-grid">
 
       <article class="cat-card" data-name="Spring Home Refresh" data-cat="maint">
         <span class="cat-badge">FEATURED</span>
         <div class="cat-emoji">🌱</div>
-        <h3>Spring Home Refresh</h3>
-        <p class="desc">Air filter swap, AC condenser exterior cleaning, and detector battery check.</p>
+        <h3 data-i18n="cat.spring.h">Spring Home Refresh</h3>
+        <p class="desc" data-i18n="cat.spring.d">Air filter swap, AC condenser exterior cleaning, and detector battery check.</p>
         <div class="meta"><span class="price">$179</span><span class="dur">2 HRS</span></div>
-        <a href="request.html?package=spring_home_refresh" class="btn wide">Book this →</a>
+        <a href="request.html?package=spring_home_refresh" class="btn wide" data-i18n="cat.book">Book this →</a>
       </article>
 
       <article class="cat-card" data-name="Home Safety Check" data-cat="maint">
         <div class="cat-emoji">🚨</div>
-        <h3>Home Safety Check</h3>
-        <p class="desc">Test all smoke/CO detectors, replace batteries, and identify common home hazards.</p>
+        <h3 data-i18n="cat.safety.h">Home Safety Check</h3>
+        <p class="desc" data-i18n="cat.safety.d">Test all smoke/CO detectors, replace batteries, and identify common home hazards.</p>
         <div class="meta"><span class="price">$99</span><span class="dur">1 HR</span></div>
-        <a href="request.html?package=home_safety_check" class="btn wide">Book this →</a>
+        <a href="request.html?package=home_safety_check" class="btn wide" data-i18n="cat.book">Book this →</a>
       </article>
 
       <article class="cat-card" data-name="Caulking Refresh" data-cat="maint">
         <div class="cat-emoji">🛁</div>
-        <h3>Caulking Refresh</h3>
-        <p class="desc">Re-caulk kitchen and bathroom wet areas for a clean, water-tight finish.</p>
+        <h3 data-i18n="cat.caulk.h">Caulking Refresh</h3>
+        <p class="desc" data-i18n="cat.caulk.d">Re-caulk kitchen and bathroom wet areas for a clean, water-tight finish.</p>
         <div class="meta"><span class="price">$129</span><span class="dur">1.5 HRS</span></div>
-        <a href="request.html?package=caulking_refresh" class="btn wide">Book this →</a>
+        <a href="request.html?package=caulking_refresh" class="btn wide" data-i18n="cat.book">Book this →</a>
       </article>
 
       <article class="cat-card" data-name="Weatherproofing Package" data-cat="maint">
         <div class="cat-emoji">🌬️</div>
-        <h3>Weatherproofing Package</h3>
-        <p class="desc">Seal window/door drafts, install door sweeps, and add weather stripping.</p>
+        <h3 data-i18n="cat.weather.h">Weatherproofing Package</h3>
+        <p class="desc" data-i18n="cat.weather.d">Seal window/door drafts, install door sweeps, and add weather stripping.</p>
         <div class="meta"><span class="price">$149</span><span class="dur">2 HRS</span></div>
-        <a href="request.html?package=weatherproofing" class="btn wide">Book this →</a>
+        <a href="request.html?package=weatherproofing" class="btn wide" data-i18n="cat.book">Book this →</a>
       </article>
 
       <article class="cat-card" data-name="Dryer Vent Cleaning" data-cat="maint">
         <div class="cat-emoji">🔥</div>
-        <h3>Dryer Vent Cleaning</h3>
-        <p class="desc">Clean accessible dryer vent and ductwork to prevent fire hazards.</p>
+        <h3 data-i18n="cat.dryer.h">Dryer Vent Cleaning</h3>
+        <p class="desc" data-i18n="cat.dryer.d">Clean accessible dryer vent and ductwork to prevent fire hazards.</p>
         <div class="meta"><span class="price">$149</span><span class="dur">1.5 HRS</span></div>
-        <a href="request.html?package=dryer_vent_cleaning" class="btn wide">Book this →</a>
+        <a href="request.html?package=dryer_vent_cleaning" class="btn wide" data-i18n="cat.book">Book this →</a>
       </article>
 
       <article class="cat-card" data-name="Garage Tune-Up" data-cat="maint">
         <div class="cat-emoji">🚗</div>
-        <h3>Garage Tune-Up</h3>
-        <p class="desc">Lubricate tracks, check safety sensors, and verify alignment.</p>
+        <h3 data-i18n="cat.garage.h">Garage Tune-Up</h3>
+        <p class="desc" data-i18n="cat.garage.d">Lubricate tracks, check safety sensors, and verify alignment.</p>
         <div class="meta"><span class="price">$129</span><span class="dur">1 HR</span></div>
-        <a href="request.html?package=garage_tune_up" class="btn wide">Book this →</a>
+        <a href="request.html?package=garage_tune_up" class="btn wide" data-i18n="cat.book">Book this →</a>
       </article>
 
       <article class="cat-card" data-name="Ceiling Fan Clean" data-cat="maint">
         <div class="cat-emoji">🌀</div>
-        <h3>Ceiling Fan Clean</h3>
-        <p class="desc">Deep clean and balance wobble on existing ceiling fans.</p>
+        <h3 data-i18n="cat.fan_clean.h">Ceiling Fan Clean</h3>
+        <p class="desc" data-i18n="cat.fan_clean.d">Deep clean and balance wobble on existing ceiling fans.</p>
         <div class="meta"><span class="price">$109</span><span class="dur">1 HR</span></div>
-        <a href="request.html?package=ceiling_fan_clean" class="btn wide">Book this →</a>
+        <a href="request.html?package=ceiling_fan_clean" class="btn wide" data-i18n="cat.book">Book this →</a>
       </article>
 
     </div>
@@ -277,41 +277,41 @@
   <!-- PAINT & DRYWALL -->
   <section class="cat-section" data-cat="paint">
     <div class="cat-h">
-      <h2>🎨 Paint &amp; Drywall <span class="cat-tally"></span></h2>
-      <p>Patches, touch-ups, and trim work that makes the room feel new.</p>
+      <h2><span data-i18n="cat.sec.paint.h">🎨 Paint &amp; Drywall</span> <span class="cat-tally"></span></h2>
+      <p data-i18n="cat.sec.paint.p">Patches, touch-ups, and trim work that makes the room feel new.</p>
     </div>
     <div class="cat-grid">
 
       <article class="cat-card" data-name="Drywall Patch &amp; Blend" data-cat="paint">
         <div class="cat-emoji">🧱</div>
-        <h3>Drywall Patch &amp; Blend</h3>
-        <p class="desc">Patch small holes, blend texture, and touch-up paint.</p>
+        <h3 data-i18n="cat.dry_patch.h">Drywall Patch &amp; Blend</h3>
+        <p class="desc" data-i18n="cat.dry_patch.d">Patch small holes, blend texture, and touch-up paint.</p>
         <div class="meta"><span class="price">$149</span><span class="dur">2 HRS</span></div>
-        <a href="request.html?package=drywall_patch" class="btn wide">Book this →</a>
+        <a href="request.html?package=drywall_patch" class="btn wide" data-i18n="cat.book">Book this →</a>
       </article>
 
       <article class="cat-card" data-name="Paint Touch-Up" data-cat="paint">
         <div class="cat-emoji">🖌️</div>
-        <h3>Paint Touch-Up</h3>
-        <p class="desc">Fix scuffs, marks, and small wall touch-ups.</p>
+        <h3 data-i18n="cat.paint.h">Paint Touch-Up</h3>
+        <p class="desc" data-i18n="cat.paint.d">Fix scuffs, marks, and small wall touch-ups.</p>
         <div class="meta"><span class="price">$149</span><span class="dur">2 HRS</span></div>
-        <a href="request.html?package=paint_touch_up" class="btn wide">Book this →</a>
+        <a href="request.html?package=paint_touch_up" class="btn wide" data-i18n="cat.book">Book this →</a>
       </article>
 
       <article class="cat-card" data-name="Trim Refresh" data-cat="paint">
         <div class="cat-emoji">🪞</div>
-        <h3>Trim Refresh</h3>
-        <p class="desc">Paint baseboards or trim in a single room (materials included).</p>
+        <h3 data-i18n="cat.trim_paint.h">Trim Refresh</h3>
+        <p class="desc" data-i18n="cat.trim_paint.d">Paint baseboards or trim in a single room (materials included).</p>
         <div class="meta"><span class="price">$179</span><span class="dur">2.5 HRS</span></div>
-        <a href="request.html?package=trim_refresh" class="btn wide">Book this →</a>
+        <a href="request.html?package=trim_refresh" class="btn wide" data-i18n="cat.book">Book this →</a>
       </article>
 
       <article class="cat-card" data-name="Trim Repair" data-cat="paint">
         <div class="cat-emoji">🪵</div>
-        <h3>Trim Repair</h3>
-        <p class="desc">Repair or replace small sections of damaged baseboard or casing.</p>
+        <h3 data-i18n="cat.trim_repair.h">Trim Repair</h3>
+        <p class="desc" data-i18n="cat.trim_repair.d">Repair or replace small sections of damaged baseboard or casing.</p>
         <div class="meta"><span class="price">$149</span><span class="dur">1.5 HRS</span></div>
-        <a href="request.html?package=trim_repair" class="btn wide">Book this →</a>
+        <a href="request.html?package=trim_repair" class="btn wide" data-i18n="cat.book">Book this →</a>
       </article>
 
     </div>
@@ -320,41 +320,41 @@
   <!-- FLOORING & REPAIR -->
   <section class="cat-section" data-cat="floor">
     <div class="cat-h">
-      <h2>🪜 Flooring &amp; Repair <span class="cat-tally"></span></h2>
-      <p>Squeaks, loose planks, transitions, and small-area installs.</p>
+      <h2><span data-i18n="cat.sec.floor.h">🪜 Flooring &amp; Repair</span> <span class="cat-tally"></span></h2>
+      <p data-i18n="cat.sec.floor.p">Squeaks, loose planks, transitions, and small-area installs.</p>
     </div>
     <div class="cat-grid">
 
       <article class="cat-card" data-name="Floor Repair &amp; Fix" data-cat="floor">
         <div class="cat-emoji">🔨</div>
-        <h3>Floor Repair &amp; Fix</h3>
-        <p class="desc">Repair loose planks, squeaks, and transition strips.</p>
+        <h3 data-i18n="cat.floor_fix.h">Floor Repair &amp; Fix</h3>
+        <p class="desc" data-i18n="cat.floor_fix.d">Repair loose planks, squeaks, and transition strips.</p>
         <div class="meta"><span class="price">$149</span><span class="dur">1.5 HRS</span></div>
-        <a href="request.html?package=floor_repair" class="btn wide">Book this →</a>
+        <a href="request.html?package=floor_repair" class="btn wide" data-i18n="cat.book">Book this →</a>
       </article>
 
       <article class="cat-card" data-name="Carpet Patch &amp; Stretch" data-cat="floor">
         <div class="cat-emoji">🧵</div>
-        <h3>Carpet Patch &amp; Stretch</h3>
-        <p class="desc">Re-stretch small loose areas or patch single damage spots.</p>
+        <h3 data-i18n="cat.carpet.h">Carpet Patch &amp; Stretch</h3>
+        <p class="desc" data-i18n="cat.carpet.d">Re-stretch small loose areas or patch single damage spots.</p>
         <div class="meta"><span class="price">$149</span><span class="dur">1.5 HRS</span></div>
-        <a href="request.html?package=carpet_patch" class="btn wide">Book this →</a>
+        <a href="request.html?package=carpet_patch" class="btn wide" data-i18n="cat.book">Book this →</a>
       </article>
 
       <article class="cat-card" data-name="Transition Install" data-cat="floor">
         <div class="cat-emoji">🚪</div>
-        <h3>Transition Install</h3>
-        <p class="desc">Install doorway transitions, thresholds, and T-moldings.</p>
+        <h3 data-i18n="cat.trans.h">Transition Install</h3>
+        <p class="desc" data-i18n="cat.trans.d">Install doorway transitions, thresholds, and T-moldings.</p>
         <div class="meta"><span class="price">$129</span><span class="dur">1 HR</span></div>
-        <a href="request.html?package=transition_install" class="btn wide">Book this →</a>
+        <a href="request.html?package=transition_install" class="btn wide" data-i18n="cat.book">Book this →</a>
       </article>
 
       <article class="cat-card" data-name="Small Area Flooring" data-cat="floor">
         <div class="cat-emoji">🪵</div>
-        <h3>Small Area Flooring</h3>
-        <p class="desc">Install laminate or LVP up to 75 sq ft (materials provided by client).</p>
+        <h3 data-i18n="cat.small_floor.h">Small Area Flooring</h3>
+        <p class="desc" data-i18n="cat.small_floor.d">Install laminate or LVP up to 75 sq ft (materials provided by client).</p>
         <div class="meta"><span class="price">$299</span><span class="dur">2.5 HRS</span></div>
-        <a href="request.html?package=small_area_flooring" class="btn wide">Book this →</a>
+        <a href="request.html?package=small_area_flooring" class="btn wide" data-i18n="cat.book">Book this →</a>
       </article>
 
     </div>
@@ -363,33 +363,33 @@
   <!-- KITCHEN & APPLIANCES -->
   <section class="cat-section" data-cat="kitchen">
     <div class="cat-h">
-      <h2>🍳 Kitchen &amp; Appliances <span class="cat-tally"></span></h2>
-      <p>Appliance installs, swaps, and the deep cleans you keep meaning to do.</p>
+      <h2><span data-i18n="cat.sec.kitchen.h">🍳 Kitchen &amp; Appliances</span> <span class="cat-tally"></span></h2>
+      <p data-i18n="cat.sec.kitchen.p">Appliance installs, swaps, and the deep cleans you keep meaning to do.</p>
     </div>
     <div class="cat-grid">
 
       <article class="cat-card" data-name="Kitchen Appliance Care" data-cat="kitchen">
         <div class="cat-emoji">🧊</div>
-        <h3>Kitchen Appliance Care</h3>
-        <p class="desc">Deep clean of fridge coils/dispenser and dishwasher filter maintenance.</p>
+        <h3 data-i18n="cat.kitchen_care.h">Kitchen Appliance Care</h3>
+        <p class="desc" data-i18n="cat.kitchen_care.d">Deep clean of fridge coils/dispenser and dishwasher filter maintenance.</p>
         <div class="meta"><span class="price">$149</span><span class="dur">1.5 HRS</span></div>
-        <a href="request.html?package=kitchen_appliance_care" class="btn wide">Book this →</a>
+        <a href="request.html?package=kitchen_appliance_care" class="btn wide" data-i18n="cat.book">Book this →</a>
       </article>
 
       <article class="cat-card" data-name="Appliance Install Basic" data-cat="kitchen">
         <div class="cat-emoji">🍽️</div>
-        <h3>Appliance Install Basic</h3>
-        <p class="desc">Install dishwasher, microwave, or washer/dryer using existing hookups.</p>
+        <h3 data-i18n="cat.appl.h">Appliance Install Basic</h3>
+        <p class="desc" data-i18n="cat.appl.d">Install dishwasher, microwave, or washer/dryer using existing hookups.</p>
         <div class="meta"><span class="price">$199</span><span class="dur">2 HRS</span></div>
-        <a href="request.html?package=appliance_install" class="btn wide">Book this →</a>
+        <a href="request.html?package=appliance_install" class="btn wide" data-i18n="cat.book">Book this →</a>
       </article>
 
       <article class="cat-card" data-name="Garbage Disposal Replacement" data-cat="kitchen">
         <div class="cat-emoji">🚰</div>
-        <h3>Garbage Disposal Replacement</h3>
-        <p class="desc">Replace existing disposal unit with new model (hardware included).</p>
+        <h3 data-i18n="cat.disposal.h">Garbage Disposal Replacement</h3>
+        <p class="desc" data-i18n="cat.disposal.d">Replace existing disposal unit with new model (hardware included).</p>
         <div class="meta"><span class="price">$149</span><span class="dur">1.5 HRS</span></div>
-        <a href="request.html?package=garbage_disposal" class="btn wide">Book this →</a>
+        <a href="request.html?package=garbage_disposal" class="btn wide" data-i18n="cat.book">Book this →</a>
       </article>
 
     </div>
@@ -398,25 +398,25 @@
   <!-- FURNITURE & ASSEMBLY -->
   <section class="cat-section" data-cat="furn">
     <div class="cat-h">
-      <h2>🛋 Furniture &amp; Assembly <span class="cat-tally"></span></h2>
-      <p>IKEA, Wayfair, big-box flat-pack — bring the boxes, we bring the patience.</p>
+      <h2><span data-i18n="cat.sec.furn.h">🛋 Furniture &amp; Assembly</span> <span class="cat-tally"></span></h2>
+      <p data-i18n="cat.sec.furn.p">IKEA, Wayfair, big-box flat-pack — bring the boxes, we bring the patience.</p>
     </div>
     <div class="cat-grid">
 
       <article class="cat-card" data-name="Furniture Assembly" data-cat="furn">
         <div class="cat-emoji">🪑</div>
-        <h3>Furniture Assembly</h3>
-        <p class="desc">Standard assembly for up to 3 furniture items (IKEA, Wayfair, etc.).</p>
+        <h3 data-i18n="cat.furn_assy.h">Furniture Assembly</h3>
+        <p class="desc" data-i18n="cat.furn_assy.d">Standard assembly for up to 3 furniture items (IKEA, Wayfair, etc.).</p>
         <div class="meta"><span class="price">$149</span><span class="dur">2 HRS</span></div>
-        <a href="request.html?package=furniture_assembly" class="btn wide">Book this →</a>
+        <a href="request.html?package=furniture_assembly" class="btn wide" data-i18n="cat.book">Book this →</a>
       </article>
 
       <article class="cat-card" data-name="Wall Mount &amp; Install" data-cat="furn">
         <div class="cat-emoji">🧱</div>
-        <h3>Wall Mount &amp; Install</h3>
-        <p class="desc">Install wall-mounted shelves, TVs, or organization systems.</p>
+        <h3 data-i18n="cat.wall_mount.h">Wall Mount &amp; Install</h3>
+        <p class="desc" data-i18n="cat.wall_mount.d">Install wall-mounted shelves, TVs, or organization systems.</p>
         <div class="meta"><span class="price">$129</span><span class="dur">1 HR</span></div>
-        <a href="request.html?package=wall_mount_install" class="btn wide">Book this →</a>
+        <a href="request.html?package=wall_mount_install" class="btn wide" data-i18n="cat.book">Book this →</a>
       </article>
 
     </div>
@@ -425,51 +425,51 @@
   <!-- EXTERIOR -->
   <section class="cat-section" data-cat="ext">
     <div class="cat-h">
-      <h2>🪵 Exterior Services <span class="cat-tally"></span></h2>
-      <p>Decks, fences, gutters, mailboxes, and the curb-appeal grind.</p>
+      <h2><span data-i18n="cat.sec.ext.h">🪵 Exterior Services</span> <span class="cat-tally"></span></h2>
+      <p data-i18n="cat.sec.ext.p">Decks, fences, gutters, mailboxes, and the curb-appeal grind.</p>
     </div>
     <div class="cat-grid">
 
       <article class="cat-card" data-name="Exterior Refresh" data-cat="ext">
         <div class="cat-emoji">🏡</div>
-        <h3>Exterior Refresh</h3>
-        <p class="desc">Gutter cleaning, surface pressure washing, and minor hardware tight-ups.</p>
+        <h3 data-i18n="cat.ext_refresh.h">Exterior Refresh</h3>
+        <p class="desc" data-i18n="cat.ext_refresh.d">Gutter cleaning, surface pressure washing, and minor hardware tight-ups.</p>
         <div class="meta"><span class="price">$299</span><span class="dur">4 HRS</span></div>
-        <a href="request.html?package=exterior_refresh" class="btn wide">Book this →</a>
+        <a href="request.html?package=exterior_refresh" class="btn wide" data-i18n="cat.book">Book this →</a>
       </article>
 
       <article class="cat-card" data-name="Fence Patch-Up" data-cat="ext">
-        <span class="cat-badge">POPULAR</span>
+        <span class="cat-badge" data-i18n="cat.badge.popular">POPULAR</span>
         <div class="cat-emoji">🪚</div>
-        <h3>Fence Patch-Up</h3>
-        <p class="desc">Replace broken pickets, tighten hinges, and adjust gate alignment.</p>
+        <h3 data-i18n="cat.fence.h">Fence Patch-Up</h3>
+        <p class="desc" data-i18n="cat.fence.d">Replace broken pickets, tighten hinges, and adjust gate alignment.</p>
         <div class="meta"><span class="price">$449</span><span class="dur">4 HRS</span></div>
-        <a href="request.html?package=fence_patch_up" class="btn wide">Book this →</a>
+        <a href="request.html?package=fence_patch_up" class="btn wide" data-i18n="cat.book">Book this →</a>
       </article>
 
       <article class="cat-card" data-name="Deck Revive" data-cat="ext">
         <span class="cat-badge">BEST VALUE</span>
         <div class="cat-emoji">🪵</div>
-        <h3>Deck Revive</h3>
-        <p class="desc">Small deck repair, pressure wash, sand, and stain (up to 300 sq ft).</p>
+        <h3 data-i18n="cat.deck.h">Deck Revive</h3>
+        <p class="desc" data-i18n="cat.deck.d">Small deck repair, pressure wash, sand, and stain (up to 300 sq ft).</p>
         <div class="meta"><span class="price">$599</span><span class="dur">4 HRS</span></div>
-        <a href="request.html?package=deck_revive" class="btn wide">Book this →</a>
+        <a href="request.html?package=deck_revive" class="btn wide" data-i18n="cat.book">Book this →</a>
       </article>
 
       <article class="cat-card" data-name="Power Wash Boost" data-cat="ext">
         <div class="cat-emoji">💦</div>
-        <h3>Power Wash Boost</h3>
-        <p class="desc">Driveway, walkway, or patio pressure washing.</p>
+        <h3 data-i18n="cat.power.h">Power Wash Boost</h3>
+        <p class="desc" data-i18n="cat.power.d">Driveway, walkway, or patio pressure washing.</p>
         <div class="meta"><span class="price">$149</span><span class="dur">1.5 HRS</span></div>
-        <a href="request.html?package=power_wash_boost" class="btn wide">Book this →</a>
+        <a href="request.html?package=power_wash_boost" class="btn wide" data-i18n="cat.book">Book this →</a>
       </article>
 
       <article class="cat-card" data-name="Mailbox Refresh" data-cat="ext">
         <div class="cat-emoji">📬</div>
-        <h3>Mailbox Refresh</h3>
-        <p class="desc">Install new mailbox or repair existing post and address numbers.</p>
+        <h3 data-i18n="cat.mailbox.h">Mailbox Refresh</h3>
+        <p class="desc" data-i18n="cat.mailbox.d">Install new mailbox or repair existing post and address numbers.</p>
         <div class="meta"><span class="price">$129</span><span class="dur">1 HR</span></div>
-        <a href="request.html?package=mailbox_refresh" class="btn wide">Book this →</a>
+        <a href="request.html?package=mailbox_refresh" class="btn wide" data-i18n="cat.book">Book this →</a>
       </article>
 
     </div>
@@ -478,41 +478,41 @@
   <!-- HOME ORGANIZATION & SPECIALTY -->
   <section class="cat-section" data-cat="org">
     <div class="cat-h">
-      <h2>📦 Home Organization &amp; Specialty <span class="cat-tally"></span></h2>
-      <p>Closets, cabinets, baby-proofing, pet doors — the personal-touch projects.</p>
+      <h2><span data-i18n="cat.sec.org.h">📦 Home Organization &amp; Specialty</span> <span class="cat-tally"></span></h2>
+      <p data-i18n="cat.sec.org.p">Closets, cabinets, baby-proofing, pet doors — the personal-touch projects.</p>
     </div>
     <div class="cat-grid">
 
       <article class="cat-card" data-name="Pet Door Install" data-cat="org">
         <div class="cat-emoji">🐕</div>
-        <h3>Pet Door Install</h3>
-        <p class="desc">Install pet door into a standard wood door (up to 12x12 panel).</p>
+        <h3 data-i18n="cat.pet.h">Pet Door Install</h3>
+        <p class="desc" data-i18n="cat.pet.d">Install pet door into a standard wood door (up to 12x12 panel).</p>
         <div class="meta"><span class="price">$199</span><span class="dur">2 HRS</span></div>
-        <a href="request.html?package=pet_door_install" class="btn wide">Book this →</a>
+        <a href="request.html?package=pet_door_install" class="btn wide" data-i18n="cat.book">Book this →</a>
       </article>
 
       <article class="cat-card" data-name="Baby Proofing Package" data-cat="org">
         <div class="cat-emoji">🍼</div>
-        <h3>Baby Proofing Package</h3>
-        <p class="desc">Secure heavy furniture, install safety locks, and anchor items.</p>
+        <h3 data-i18n="cat.baby.h">Baby Proofing Package</h3>
+        <p class="desc" data-i18n="cat.baby.d">Secure heavy furniture, install safety locks, and anchor items.</p>
         <div class="meta"><span class="price">$179</span><span class="dur">2 HRS</span></div>
-        <a href="request.html?package=baby_proofing" class="btn wide">Book this →</a>
+        <a href="request.html?package=baby_proofing" class="btn wide" data-i18n="cat.book">Book this →</a>
       </article>
 
       <article class="cat-card" data-name="Closet Storage Setup" data-cat="org">
         <div class="cat-emoji">👔</div>
-        <h3>Closet Storage Setup</h3>
-        <p class="desc">Install adjustable shelving, rods, and organization systems.</p>
+        <h3 data-i18n="cat.closet.h">Closet Storage Setup</h3>
+        <p class="desc" data-i18n="cat.closet.d">Install adjustable shelving, rods, and organization systems.</p>
         <div class="meta"><span class="price">$199</span><span class="dur">2.5 HRS</span></div>
-        <a href="request.html?package=closet_storage_setup" class="btn wide">Book this →</a>
+        <a href="request.html?package=closet_storage_setup" class="btn wide" data-i18n="cat.book">Book this →</a>
       </article>
 
       <article class="cat-card" data-name="Cabinet Hardware Refresh" data-cat="org">
         <div class="cat-emoji">🪛</div>
-        <h3>Cabinet Hardware Refresh</h3>
-        <p class="desc">Replace cabinet knobs, pulls, and hinges.</p>
+        <h3 data-i18n="cat.cab_hw.h">Cabinet Hardware Refresh</h3>
+        <p class="desc" data-i18n="cat.cab_hw.d">Replace cabinet knobs, pulls, and hinges.</p>
         <div class="meta"><span class="price">$129</span><span class="dur">1.5 HRS</span></div>
-        <a href="request.html?package=cabinet_hardware" class="btn wide">Book this →</a>
+        <a href="request.html?package=cabinet_hardware" class="btn wide" data-i18n="cat.book">Book this →</a>
       </article>
 
     </div>
@@ -521,34 +521,34 @@
   <!-- HOURLY BLOCKS -->
   <section class="cat-section" data-cat="hourly">
     <div class="cat-h">
-      <h2>⏱️ Flexible Hourly Blocks <span class="cat-tally"></span></h2>
-      <p>For lists that don't match a fixed bundle. You write the list, we bring the tools.</p>
+      <h2><span data-i18n="cat.sec.hourly.h">⏱️ Flexible Hourly Blocks</span> <span class="cat-tally"></span></h2>
+      <p data-i18n="cat.sec.hourly.p">For lists that don't match a fixed bundle. You write the list, we bring the tools.</p>
     </div>
     <div class="cat-grid">
 
       <article class="cat-card" data-name="Quick Fix Block" data-cat="hourly">
         <div class="cat-emoji">⚡</div>
-        <h3>Quick Fix Block</h3>
-        <p class="desc">2-hour block for small tasks and miscellaneous repairs.</p>
+        <h3 data-i18n="cat.hourly_quick.h">Quick Fix Block</h3>
+        <p class="desc" data-i18n="cat.hourly_quick.d">2-hour block for small tasks and miscellaneous repairs.</p>
         <div class="meta"><span class="price">$179</span><span class="dur">2 HRS · 1 CREW</span></div>
-        <a href="request.html?package=quick_fix_block" class="btn wide">Reserve →</a>
+        <a href="request.html?package=quick_fix_block" class="btn wide" data-i18n="cat.book">Reserve →</a>
       </article>
 
       <article class="cat-card pop" data-name="Half Day Block" data-cat="hourly">
         <span class="cat-badge">MOST BOOKED</span>
         <div class="cat-emoji">🕓</div>
-        <h3>Half Day Block</h3>
-        <p class="desc">4-hour block for medium-sized projects or multiple tasks.</p>
+        <h3 data-i18n="cat.hourly_half.h">Half Day Block</h3>
+        <p class="desc" data-i18n="cat.hourly_half.d">4-hour block for medium-sized projects or multiple tasks.</p>
         <div class="meta"><span class="price">$279</span><span class="dur">4 HRS · 1 CREW</span></div>
-        <a href="request.html?package=half_day_block" class="btn wide">Reserve →</a>
+        <a href="request.html?package=half_day_block" class="btn wide" data-i18n="cat.book">Reserve →</a>
       </article>
 
       <article class="cat-card" data-name="Full Day Block" data-cat="hourly">
         <div class="cat-emoji">🌅</div>
-        <h3>Full Day Block</h3>
-        <p class="desc">8-hour block for major projects or full-day labor.</p>
+        <h3 data-i18n="cat.hourly_full.h">Full Day Block</h3>
+        <p class="desc" data-i18n="cat.hourly_full.d">8-hour block for major projects or full-day labor.</p>
         <div class="meta"><span class="price">$499</span><span class="dur">8 HRS · 1 CREW</span></div>
-        <a href="request.html?package=full_day_block" class="btn wide">Reserve →</a>
+        <a href="request.html?package=full_day_block" class="btn wide" data-i18n="cat.book">Reserve →</a>
       </article>
 
     </div>
@@ -557,45 +557,45 @@
   <!-- ADD-ONS -->
   <section class="cat-section" data-cat="addon">
     <div class="cat-h">
-      <h2>➕ Add-Ons <span class="cat-tally"></span></h2>
-      <p>Tack onto any rescue while we're already there. Multiple quantities available — most cap at 10 per visit.</p>
+      <h2><span data-i18n="cat.sec.addon.h">➕ Add-Ons</span> <span class="cat-tally"></span></h2>
+      <p data-i18n="cat.sec.addon.p">Tack onto any rescue while we're already there. Multiple quantities available — most cap at 10 per visit.</p>
     </div>
     <div class="cat-grid">
 
       <article class="cat-card" data-name="Add-On: Headlight Restore" data-cat="addon">
-        <span class="cat-badge">ADD-ON</span>
+        <span class="cat-badge" data-i18n="cat.badge.addon">ADD-ON</span>
         <div class="cat-emoji">🚗</div>
-        <h3>Headlight Restore</h3>
-        <p class="desc">Restore, sand, polish, and UV seal your vehicle's headlights while we're on site.</p>
+        <h3 data-i18n="cat.addon_head.h">Headlight Restore</h3>
+        <p class="desc" data-i18n="cat.addon_head.d">Restore, sand, polish, and UV seal your vehicle's headlights while we're on site.</p>
         <div class="meta"><span class="price">$120</span><span class="dur">1 HR · EACH</span></div>
-        <a href="request.html?addon=addon_headlight" class="btn wide">Add this →</a>
+        <a href="request.html?addon=addon_headlight" class="btn wide" data-i18n="cat.add">Add this →</a>
       </article>
 
       <article class="cat-card" data-name="Add-On: Fixture Swap" data-cat="addon">
-        <span class="cat-badge">ADD-ON</span>
+        <span class="cat-badge" data-i18n="cat.badge.addon">ADD-ON</span>
         <div class="cat-emoji">💡</div>
-        <h3>Extra Fixture Swap</h3>
-        <p class="desc">Additional fixture swap beyond your initial quote.</p>
+        <h3 data-i18n="cat.addon_fix.h">Extra Fixture Swap</h3>
+        <p class="desc" data-i18n="cat.addon_fix.d">Additional fixture swap beyond your initial quote.</p>
         <div class="meta"><span class="price">$89</span><span class="dur">45 MIN · EACH</span></div>
-        <a href="request.html?addon=addon_fixture_swap" class="btn wide">Add this →</a>
+        <a href="request.html?addon=addon_fixture_swap" class="btn wide" data-i18n="cat.add">Add this →</a>
       </article>
 
       <article class="cat-card" data-name="Add-On: Power Wash" data-cat="addon">
-        <span class="cat-badge">ADD-ON</span>
+        <span class="cat-badge" data-i18n="cat.badge.addon">ADD-ON</span>
         <div class="cat-emoji">💦</div>
-        <h3>Extra Power Wash Area</h3>
-        <p class="desc">Additional area pressure washing beyond your initial quote.</p>
+        <h3 data-i18n="cat.addon_power.h">Extra Power Wash Area</h3>
+        <p class="desc" data-i18n="cat.addon_power.d">Additional area pressure washing beyond your initial quote.</p>
         <div class="meta"><span class="price">$99</span><span class="dur">1 HR · EACH</span></div>
-        <a href="request.html?addon=addon_power_wash" class="btn wide">Add this →</a>
+        <a href="request.html?addon=addon_power_wash" class="btn wide" data-i18n="cat.add">Add this →</a>
       </article>
 
       <article class="cat-card" data-name="Add-On: Caulking" data-cat="addon">
-        <span class="cat-badge">ADD-ON</span>
+        <span class="cat-badge" data-i18n="cat.badge.addon">ADD-ON</span>
         <div class="cat-emoji">🛁</div>
-        <h3>Extra Caulking Repair</h3>
-        <p class="desc">Additional small caulking repair beyond your initial quote.</p>
+        <h3 data-i18n="cat.addon_caulk.h">Extra Caulking Repair</h3>
+        <p class="desc" data-i18n="cat.addon_caulk.d">Additional small caulking repair beyond your initial quote.</p>
         <div class="meta"><span class="price">$79</span><span class="dur">45 MIN · EACH</span></div>
-        <a href="request.html?addon=addon_caulking" class="btn wide">Add this →</a>
+        <a href="request.html?addon=addon_caulking" class="btn wide" data-i18n="cat.add">Add this →</a>
       </article>
 
     </div>
@@ -603,9 +603,9 @@
 
   <!-- CTA -->
   <div class="cat-cta">
-    <h3>Don't see exactly what you need?</h3>
-    <p>Ranger can quote a custom rescue from a photo and a few details. Same flat-price, same-week availability.</p>
-    <a href="booking.html" class="btn lg">Start with Ranger →</a>
+    <h3 data-i18n="cat.cta.h">Don't see exactly what you need?</h3>
+    <p data-i18n="cat.cta.p">Ranger can quote a custom rescue from a photo and a few details. Same flat-price, same-week availability.</p>
+    <a href="booking.html" class="btn lg" data-i18n="cat.cta.btn">Start with Ranger →</a>
   </div>
 
 </main>
@@ -616,7 +616,7 @@
     <div class="foot-grid">
       <div class="foot-brand">
         <img src="assets/logo.png" alt="ATX Home Rescue"/>
-        <p>Flat-priced handyman &amp; home-care for Northwest Austin. Repair. Remodel. Reclaim your weekends.</p>
+        <p data-i18n="pros.foot.lede">Flat-priced handyman &amp; home-care for Northwest Austin. Repair. Remodel. Reclaim your weekends.</p>
         <div class="foot-contact">
           📞 <a href="tel:+17373789595">(737) 378-9595</a><br/>
           ✉ <a href="mailto:sales@atxhomerescue.com">sales@atxhomerescue.com</a><br/>
@@ -624,40 +624,40 @@
         </div>
       </div>
       <div>
-        <h5>Packages</h5>
+        <h5 data-i18n="pros.nav.packages">Packages</h5>
         <a href="index.html#packages">Featured</a>
-        <a href="packages.html#">All packages</a>
+        <a href="packages.html#" data-i18n="pros.nav.allpkg">All packages</a>
         <a href="packages.html?cat=bundles">Bundles</a>
         <a href="packages.html?cat=hourly">Hourly blocks</a>
         <a href="packages.html?cat=addon">Add-ons</a>
       </div>
       <div>
         <h5>Company</h5>
-        <a href="pros.html">Our Pros</a>
-        <a href="pros.html#apply">Apply to roster</a>
-        <a href="index.html#how">How it works</a>
+        <a href="pros.html" data-i18n="pros.nav.pros">Our Pros</a>
+        <a href="pros.html#apply" data-i18n="pros.foot.apply">Apply to roster</a>
+        <a href="index.html#how" data-i18n="pros.nav.how">How it works</a>
         <a href="index.html#gallery">Recent work</a>
         <a href="index.html#reviews">Reviews</a>
-        <a href="index.html#faq">FAQ</a>
+        <a href="index.html#faq" data-i18n="pros.nav.faq">FAQ</a>
         <a href="booking.html">Contact</a>
       </div>
       <div>
-        <h5>Service area</h5>
+        <h5 data-i18n="pros.foot.h.area">Service area</h5>
         <div class="mono" style="font-size:12px;line-height:2;color:#cfd9e3">
           78726 · 78727 · 78729<br/>
           78730 · 78731 · 78750 · 78759<br/>
         </div>
-        <div style="margin-top:14px;color:#cfd9e3;line-height:1.6">
+        <div style="margin-top:14px;color:#cfd9e3;line-height:1.6" data-i18n-html="pros.foot.area.neighbor">
           Anderson Mill · Jester · Great Hills ·<br/>
           Balcones · Spicewood · Steiner Ranch (soon)
         </div>
       </div>
     </div>
     <div class="foot-bottom">
-      <div>© 2026 ATX Home Rescue. All rights reserved.</div>
+      <div data-i18n="pros.foot.copy">© 2026 ATX Home Rescue. All rights reserved.</div>
       <div style="display:flex;gap:18px">
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
+        <a href="privacy.html" data-i18n="pros.foot.privacy">Privacy</a>
+        <a href="terms.html" data-i18n="pros.foot.terms">Terms</a>
       </div>
     </div>
   </div>

@@ -46,22 +46,24 @@
         <div class="tag">Repair · Remodel · Reclaim</div>
       </div>
     </a>
+    <button class="lang-toggle" id="langToggle" aria-label="Language" style="margin-left:auto"><span class="lang-flag">EN</span> / <span class="lang-flag off">ES</span></button>
   </div>
 </header>
 
 <div class="not-found">
   <div class="card">
     <div class="code">404</div>
-    <h1>Lost the map?</h1>
-    <p>This page wandered off. Happens to the best of us. Head back to the homepage and Ranger will get you sorted.</p>
+    <h1 data-i18n="404.h">Lost the trail?</h1>
+    <p data-i18n="404.p">This page isn't here — maybe a typo, or it moved. Try one of these:</p>
     <div class="actions">
-      <a href="index.html" class="btn lg">← Back to homepage</a>
-      <a href="booking.html" class="btn lg ghost">Talk to Ranger</a>
+      <a href="index.html" class="btn lg" data-i18n="404.home">← Back to home</a>
+      <a href="booking.html" class="btn lg ghost" data-i18n="404.book">Start with Ranger →</a>
     </div>
   </div>
 </div>
 
 <script src="scripts/i18n.js"></script>
+<script src="scripts/legal-and-404.js"></script>
 <script src="scripts/ranger-shared.js"></script>
 <script src="scripts/ranger-agent.js"></script>
 <script src="scripts/ranger-widget.js" defer></script>

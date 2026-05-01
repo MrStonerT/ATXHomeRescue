@@ -1,7 +1,11 @@
 /* ATX Home Rescue — Our Pros page logic
  * Requires i18n.js + ranger-shared.js to be loaded first
- * (provides setLang/lang globals and window.RangerShared).
+ * (provides setLang/lang/t/applyI18n/bindLangToggle and window.RangerShared).
  */
+
+/* ---- Apply translations + lang toggle ---- */
+applyI18n();
+bindLangToggle(applyI18n);
 
 /* ---- Category filter tabs (filter the gallery by data-cat) ---- */
 document.querySelectorAll('.cat-tabs').forEach(group => {
@@ -40,7 +44,7 @@ if (form) {
   const submitBtn = form.querySelector('button[type="submit"]');
   let errorBox = null;
 
-  function showError(msg) {
+  function showError(key) {
     if (!errorBox) {
       errorBox = document.createElement('div');
       errorBox.className = 'apply-error';
@@ -51,7 +55,7 @@ if (form) {
       const foot = form.querySelector('.form-foot');
       foot.parentNode.insertBefore(errorBox, foot);
     }
-    errorBox.textContent = msg;
+    errorBox.textContent = t(key);
   }
   function clearError() {
     if (errorBox) errorBox.remove();
@@ -77,7 +81,7 @@ if (form) {
     e.preventDefault();
     clearError();
 
-    /* Client-side required-field check (matches design) */
+    /* Client-side required-field check */
     const required = form.querySelectorAll('[required]');
     let bad = false;
     let firstBad = null;
@@ -103,14 +107,14 @@ if (form) {
     });
     if (bad) {
       if (firstBad) firstBad.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      showError('Please fill in the highlighted fields.');
+      showError('pros.apply.err.fill');
       return;
     }
 
     /* Lock the button + collect payload */
     submitBtn.disabled = true;
     const originalLabel = submitBtn.textContent;
-    submitBtn.textContent = 'Sending…';
+    submitBtn.textContent = t('pros.apply.sending');
 
     const payload = collectForm();
 
@@ -133,27 +137,17 @@ if (form) {
     } catch {
       submitBtn.disabled = false;
       submitBtn.textContent = originalLabel;
-      showError('Could not reach our servers. Check your connection and try again, or email sales@atxhomerescue.com.');
+      showError('pros.apply.err.network');
       return;
     }
 
     if (!resp.ok) {
       submitBtn.disabled = false;
       submitBtn.textContent = originalLabel;
-      let msg = 'Something went wrong. Please try again or email sales@atxhomerescue.com.';
-      if (resp.status === 429) {
-        msg = 'Too many applications from your network in a short window. Try again in a few minutes.';
-      } else if (resp.status === 403) {
-        msg = 'Bot check failed. Reload the page and try again.';
-      } else if (resp.status === 400) {
-        try {
-          const j = await resp.json();
-          if (j && Array.isArray(j.details) && j.details.length) {
-            msg = j.details.join(' · ');
-          }
-        } catch {}
-      }
-      showError(msg);
+      let key = 'pros.apply.err.generic';
+      if (resp.status === 429)      key = 'pros.apply.err.rate';
+      else if (resp.status === 403) key = 'pros.apply.err.bot';
+      showError(key);
       return;
     }
 
@@ -164,19 +158,4 @@ if (form) {
     ok.classList.add('on');
     ok.scrollIntoView({ behavior: 'smooth', block: 'center' });
   });
-}
-
-/* ---- Language toggle (shared with rest of site) ---- */
-const langBtn = document.getElementById('langToggle');
-if (langBtn && typeof setLang === 'function') {
-  const paint = () => {
-    langBtn.innerHTML =
-      `<span class="lang-flag ${lang === 'en' ? '' : 'off'}">EN</span> / ` +
-      `<span class="lang-flag ${lang === 'es' ? '' : 'off'}">ES</span>`;
-  };
-  langBtn.addEventListener('click', () => {
-    setLang(lang === 'en' ? 'es' : 'en');
-    paint();
-  });
-  paint();
 }
